@@ -6,10 +6,23 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+#knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r libraries}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(geofacet)      # for special faceting with US map layout
+theme_set(theme_minimal())       # My favorite ggplot() theme :)
+```
+
+```{r data}
+mental_health <- readr::read_csv('Mental_Health_Care_in_the_Last_4_Weeks.csv')
 ```
 
 ```{r}
-
+mental_health %>% 
+  filter(Indicator == "Received Counseling or Therapy, Last 4 Weeks", Group == "National Estimate")
 ```
 
