@@ -10,13 +10,10 @@ output:
     df_print: paged
     code_download: true
 ---
-```{r}
-
-```
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = TRUE, warning = TRUE)
+# knitr::opts_chunk$set(echo = TRUE, message = TRUE, warning = TRUE)
 ```
 
 
@@ -36,6 +33,22 @@ library(ggimage)
 theme_set(theme_minimal())
 ```
 
-```{r data}
+
+```{r}
+
+COVIDDelhi <- COVID_19_Survey_Student_Responses %>% 
+  mutate(famconnect = `Do you find yourself more connected with your family, close friends , relatives  ?`)
+
+# health_family <- 
+COVIDDelhi %>% 
+  ggplot(aes(x = `Age of Subject`, y = famconnect)) +
+  geom_col() +
+  labs(title = "Connection With Loved Ones", 
+       subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives")
+
+
+
+```
+
 ```
 
