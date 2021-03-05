@@ -42,17 +42,17 @@ View(dataset)
 
 ```{r}
 
-COVIDDelhi <- COVID_19_Survey_Student_Responses %>% 
-  mutate(famconnect = `Do you find yourself more connected with your family, close friends , relatives  ?`)
 
-# health_family <- 
-COVIDDelhi %>% 
-  ggplot(aes(x = `Age of Subject`, y = famconnect)) +
+newdataest<- dataset %>% 
+  group_by(Age) %>% 
+  mutate(avgsleep = mean(Sleep))%>%
+  ggplot(aes(x = Age, y = avgsleep)) +
   geom_col() +
+  # facet_wrap(vars(Age)) +
   labs(title = "Connection With Loved Ones", 
        subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives")
 
-
+newdataest
 
 ```
 
