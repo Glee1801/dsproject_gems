@@ -10,23 +10,113 @@ output: html_document
 ```
 
 ```{r libraries}
-library(tidyverse)     # for graphing and data cleaning
-library(lubridate)     # for date manipulation
-library(ggthemes)      # for even more plotting themes
-library(geofacet)      # for special faceting with US map layout
-theme_set(theme_minimal())       # My favorite ggplot() theme :)
-```
-
-```{r data}
-mental_health <- readr::read_csv('Mental_Health_Care_in_the_Last_4_Weeks.csv')
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(maps)          
+library(ggmap)
+library(RColorBrewer)  # for color palettes
+library(sf)            # for working with spatial data
+library(leaflet)       # for highly customizable mapping
+library(ggthemes)      # for more themes (including theme_map())
+library(plotly)        # for the ggplotly() - basic interactivity
+library(gganimate)     # for adding animation layers to ggplots
+library(transformr)
+library(ggimage)
+theme_set(theme_minimal())
 ```
 
 ```{r}
-mental_health %>% 
-  filter(Indicator == "Received Counseling or Therapy, Last 4 Weeks", Group == "National Estimate")
+dataset <- read_csv("Data.csv")
+View(dataset)
+```
+
+
+```{r}
+agecount <- dataset %>% 
+  ggplot(aes(x = Age)) +
+  geom_bar() +
+  labs(title = "Number of Survey Respondents by Age")
+
+agecount
+
 ```
 
 ```{r}
-#test 
+dataset %>% 
+  ggplot(aes(x = Region)) +
+  geom_bar() +
+  labs(title = "Number of Survey Respondents by Region")
 ```
 
+```{r}
+dataset %>% 
+  filter(Age == "21") %>% 
+  ggplot(aes(x = Sleep, y = Connection)) +
+  geom_col() +
+  facet_wrap(vars(Region)) +
+  labs(title = "Number of Survey Respondents by Age")
+
+```
+
+```{r}
+regionsleepdata <- dataset %>% 
+  group_by(Age, Region) %>% 
+  summarize(meansleep = mean(Sleep)) %>% 
+  ggplot(aes(x = Age, y = meansleep)) +
+  geom_col() +
+  facet_wrap(vars(Region))
+
+regionsleepdata
+```
+```{r}
+cxnsleepdata <- dataset %>% 
+  group_by(Age, Connection) %>% 
+  summarize(meansleep = mean(Sleep)) %>% 
+  ggplot(aes(x = Age, y = meansleep)) +
+  geom_col() +
+  facet_wrap(vars(Connection))
+
+cxnsleepdata
+```
+```{r}
+dataset %>% 
+  group_by(Connection) %>% 
+  summarize(meansleepcxn = mean(Sleep)) %>% 
+  ggplot(aes(x = Age, y = meansleep)) +
+  geom_col() +
+  facet_wrap(vars(Connection))
+
+```
+
+
+```{r}
+dataset %>% 
+  filter(Age > 18, Age < 30) %>% 
+  group_by(Age) %>% 
+  summarize(meanfitness = mean(Fitness)) %>% 
+  ggplot(aes(x = Age, y = meanfitness)) +
+  geom_col() 
+
+```
+
+
+```{r}
+dataset %>% 
+  filter(Age > 18, Age < 30) %>% 
+  group_by(Age) %>% 
+  summarize(meansocial = mean(SocialMedia)) %>% 
+  ggplot(aes(x = Age, y = meansocial)) +
+  geom_col() 
+
+```
+
+```{r}
+dataset %>% 
+  group_by(Connection, Region) %>% 
+  summarize(meansocial = mean(SocialMedia)) %>% 
+  ggplot(aes(x = Connection, y = meansocial)) +
+  geom_col() +
+  facet_wrap(vars(Region))
+
+```
