@@ -56,5 +56,86 @@ newdataest
 
 ```
 
+```{r}
+
+newdataest %>%
+  group_by(Age, Connection) %>%
+  summarise(avgclasstime = mean(OnlineClass)) %>%
+  ggplot(aes(x = Age,
+             y = avgclasstime, 
+             color = Connection)) +
+  geom_jitter() +
+  # facet_wrap(vars(Connection))+
+  labs(x = "Age", 
+       y = "", 
+       title = "Average Amount of Hours Spent in Class by Age")
+
+
 ```
+
+
+```{r}
+
+newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
+#how to change names for each of the categories?
+
+newdataest %>%
+  group_by(AgeCat, Connection) %>%
+  # summarise(avgclasstime = mean(OnlineClass)) %>%
+  ggplot(aes(x = AgeCat,
+             y = OnlineClass, 
+             fill = Connection)) +
+  geom_boxplot() +
+  facet_wrap(vars(Connection))+
+  labs(x = "Age", 
+       y = "", 
+       title = "Average Amount of Hours Spent in Class by Age")
+
+
+```
+
+
+```{r}
+newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
+#how to change names for each of the categories?
+
+newdataset<- newdataest %>%
+  # mutate(str_sub())
+  group_by(AgeCat, Connection, Region) %>%
+  # summarise(avgclasstime = mean(OnlineClass)) %>%
+  ggplot(aes(x = AgeCat,
+             y = OnlineClass, 
+             fill = Connection)) +
+  geom_boxplot() +
+  facet_wrap(vars(Region))+
+  labs(x = "Age", 
+       y = "", 
+       title = "Average Amount of Hours Spent in Class by Age")
+newdataset 
+
+```
+
+
+```{r}
+
+###preferred graph 
+
+newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
+#how to change names for each of the categories?
+
+newdataset<- newdataest %>%
+  # mutate(str_sub())
+  group_by(AgeCat, Connection, Region) %>%
+  # summarise(avgclasstime = mean(OnlineClass)) %>%
+  ggplot(aes(x = AgeCat,
+             y = OnlineClass, 
+             fill = Connection)) +
+  geom_boxplot() +
+  facet_wrap(vars(Connection))+
+  labs(x = "Age", 
+       y = "", 
+       title = "Average Amount of Hours Spent in Class by Age")
+newdataset 
+```
+
 

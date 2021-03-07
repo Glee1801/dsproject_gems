@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = TRUE, warning = TRUE)
 ```
 
 ## R Markdown
@@ -27,8 +27,94 @@ View(COVID_19_Survey_Student_Responses)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r libraries}
+library(readr)
+library(tidyverse)
+library(lubridate)
+library(maps)          
+library(ggmap)
+library(RColorBrewer)  # for color palettes
+library(sf)            # for working with spatial data
+library(leaflet)       # for highly customizable mapping
+library(ggthemes)      # for more themes (including theme_map())
+library(plotly)        # for the ggplotly() - basic interactivity
+library(gganimate)     # for adding animation layers to ggplots
+library(transformr)
+library(ggimage)
+theme_set(theme_minimal())
 ```
+
+
+
+```{r}
+
+library(readr)
+COVID_19_Survey_Student_Responses <- read_csv("COVID-19 Survey Student Responses.csv")
+View(COVID_19_Survey_Student_Responses)
+
+```
+
+```{r}
+newdataest<- dataset %>% 
+  group_by(Age) %>% 
+  mutate(avgsleep = mean(Sleep))
+
+newdataest
+
+```
+
+```{r}
+
+newdataset<- as.data.frame(newdataest)
+
+```
+
+
+
+```{r}
+
+
+newdataest %>%
+  group_by(Age, HealthIssue, Connection) %>%
+  summarise(avgclasstime = mean(OnlineClass)) %>%
+  ggplot(aes(x = Age,
+             y = avgclasstime, 
+             color = HealthIssue)) +
+  geom_jitter() +
+  facet_wrap(vars(Connection))+
+  labs(x = "Age", 
+       y = "", 
+       title = "Average Amount of Hours Spent in Class by Age")
+```
+
+
+```{r}
+newdataest %>% 
+  group_by(Age) %>%
+  ggplot(aes(x = ClassRating)) +
+  geom_bar(aes(fill = ClassRating)) +
+  facet_wrap("ClassMedium") +
+  labs(title = "Average Class Rating by Course Medium", 
+       x = "", 
+       y = "")
+```
+
+
+
+```{r}
+
+newdataest<- dataset %>% 
+  group_by(Age) %>% 
+  mutate(avgsleep = mean(Sleep))%>%
+  ggplot(aes(x = Age, y = OnlineClass)) +
+  geom_col() +
+  # facet_wrap(vars(Age)) +
+  labs(title = "Connection With Loved Ones", 
+       subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives")
+
+newdataest
+
+```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
