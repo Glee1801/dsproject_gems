@@ -42,7 +42,7 @@ View(dataset)
 ```{r}
 newdataest
 ```
-With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's available to them). Therefore, we can infer that students might start depend more on connecting with their loved ones through social media. In the graph below, we used the data set to see if there is a strong relationship between the time spent on social media per day and whether or not they feel connection with their loved ones. 
+With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's available to them). In the graph below, we used the data set to see if there is a strong relationship between the time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that with every age group, individuals who felt they had a connection with loved ones definitely spend more time on social media. This demonstrates that at times like these, we tend to rely on our social media platforms for social interaction. 
 
 ```{r}
 newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
