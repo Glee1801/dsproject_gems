@@ -49,8 +49,8 @@ theme_set(theme_minimal())
 ```{r}
 
 library(readr)
-COVID_19_Survey_Student_Responses <- read_csv("COVID-19 Survey Student Responses.csv")
-View(COVID_19_Survey_Student_Responses)
+dataset <- read_csv("Data.csv")
+View(dataset)
 
 ```
 
@@ -105,7 +105,9 @@ newdataest %>%
 
 newdataest<- dataset %>% 
   group_by(Age) %>% 
-  mutate(avgsleep = mean(Sleep))%>%
+  mutate(avgsleep = mean(Sleep))
+
+newdataest %>% 
   ggplot(aes(x = Age, y = OnlineClass)) +
   geom_col() +
   # facet_wrap(vars(Age)) +
@@ -115,6 +117,95 @@ newdataest<- dataset %>%
 newdataest
 
 ```
+
+
+```{r}
+###preferred graph 
+
+newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
+#how to change names for each of the categories?
+
+newdataset<- newdataest %>%
+  # mutate()
+  group_by(AgeCat, Connection, Region) 
+  # summarise(avgclasstime = mean(OnlineClass))
+
+newdataset %>% 
+  # mutate(ifelse(Connection == "YES", ""))
+  ggplot(aes(x = AgeCat,
+             y = OnlineClass, 
+             fill = Connection)) +
+  geom_boxplot() +
+  facet_wrap(vars(Connection))+
+  labs(x = "Age Category", 
+       y = "", 
+       title = "Comparing Median Hours Spent in Class Per Day \n by Age and Connection to Loved Ones") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank())
+newdataset 
+
+#medians for titles of box plots
+```
+
+
+
+
+```{r}
+
+newdataset %>% 
+  group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
+  summarise(avgmedia = mean(SocialMedia)) %>%
+  ggplot(aes(x = avgmedia, 
+             y = avgsleep, 
+             color = AgeCat)) +
+  geom_boxplot() +
+  facet_wrap(vars(AgeCat)) +
+  labs(y = "", 
+       x = "Average Hours of Media Use", 
+       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        legend.position = "none")+
+  scale_color_viridis_d()
+  
+
+#boxplot only one that shows y values correctly (not in 100s like geom_col)
+# doesn't show differences in media use though 
+
+```
+
+```{r}
+newdataset %>% 
+  group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
+  summarise(avgmedia = mean(SocialMedia)) %>%
+  ggplot(aes(x = avgmedia, 
+             y = avgsleep, 
+             color = AgeCat)) +
+  geom_jitter() +
+  facet_wrap(vars(AgeCat)) +
+  labs(y = "", 
+       x = "Average Hours of Media Use", 
+       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        legend.position = "none")+
+  scale_color_viridis_d()
+
+
+#use AgeCat to graph?
+#add line of best fit?
+#overall, increased media use seems to = less sleep 
+#won't show avg sleep and seems to show a cumulative or sum of sleep ?
+
+```
+
+
+
+
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

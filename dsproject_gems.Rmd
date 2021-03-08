@@ -45,7 +45,9 @@ View(dataset)
 
 newdataest<- dataset %>% 
   group_by(Age) %>% 
-  mutate(avgsleep = mean(Sleep))%>%
+  mutate(avgsleep = mean(Sleep))
+
+newdataest %>% 
   ggplot(aes(x = Age, y = avgsleep)) +
   geom_col() +
   # facet_wrap(vars(Age)) +
@@ -69,6 +71,8 @@ newdataest %>%
   labs(x = "Age", 
        y = "", 
        title = "Average Amount of Hours Spent in Class by Age")
+
+
 
 
 ```
@@ -132,7 +136,7 @@ newdataset<- newdataest %>%
              fill = Connection)) +
   geom_boxplot() +
   facet_wrap(vars(Connection))+
-  labs(x = "Age", 
+  labs(x = "Age Category", 
        y = "", 
        title = "Average Amount of Hours Spent in Class by Age")
 newdataset 
