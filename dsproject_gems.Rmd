@@ -35,12 +35,22 @@ theme_set(theme_minimal())
 ```
 
 ```{r}
-dataset <- read_csv("Data.csv")
+
+dataset <- read_csv("Data.csv") %>% 
+  mutate(AgeCat = cut(Age, breaks = c(0,13,18,23,33,45,60), labels = c("0-13", "13-18", "18-23", "23-33", "33-45", "45-60"))) %>%
+  mutate(avgsleep = mean(Sleep)) %>% 
+  mutate(SocialCat = cut_number(SocialMedia, n = 3))
+  
+#labels = "0-1", "1-3", "3-10" label social media 
+
 View(dataset)
+
 ```
 
 
 ```{r}
+
+#not from test file
 dataset %>% 
   group_by(Age) %>% 
   
@@ -54,7 +64,9 @@ dataset %>%
 
 ```{r}
 
-newdataest %>%
+#was in test file 
+
+dataset %>%
   group_by(Age, Connection) %>%
   summarise(avgclasstime = mean(OnlineClass)) %>%
   ggplot(aes(x = Age,
@@ -73,13 +85,11 @@ newdataest %>%
 
 
 ```{r}
+#in project file 
+#preferred graph 
 
-newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
-#how to change names for each of the categories?
-
-newdataest %>%
-  group_by(AgeCat, Connection) %>%
-  # summarise(avgclasstime = mean(OnlineClass)) %>%
+dataset %>%
+  group_by(AgeCat, Connection, Region) %>% 
   ggplot(aes(x = AgeCat,
              y = OnlineClass, 
              fill = Connection)) +
@@ -87,17 +97,20 @@ newdataest %>%
   facet_wrap(vars(Connection))+
   labs(x = "Age", 
        y = "", 
-       title = "Average Amount of Hours Spent in Class by Age")
-
+       title = "Comparing Median Hours Spent in Class Per Day \n by Age and Connection to Loved Ones") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank())
+newdataset 
 
 ```
 
 
 ```{r}
-newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
-#how to change names for each of the categories?
+#not in project file
 
-newdataset<- newdataest %>%
+dataset %>%
   # mutate(str_sub())
   group_by(AgeCat, Connection, Region) %>%
   # summarise(avgclasstime = mean(OnlineClass)) %>%
@@ -113,27 +126,44 @@ newdataset
 
 ```
 
+```{r}
+dataset %>% 
+  ggplot(aes(x = SocialCat, 
+             y = Sleep, 
+             color = AgeCat)) +
+  geom_boxplot() +
+  # facet_wrap(vars(AgeCat)) +
+  labs(y = "", 
+       x = "", 
+       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        legend.position = "none")+
+  scale_color_viridis_d()
+  
+```
+
 
 ```{r}
+#scatterplot 
 
-###preferred graph 
-
-newdataest$AgeCat = cut(newdataest$Age, c(0,13,18,23,33,45,60))
-#how to change names for each of the categories?
-
-newdataset<- newdataest %>%
-  # mutate(str_sub())
-  group_by(AgeCat, Connection, Region) %>%
-  # summarise(avgclasstime = mean(OnlineClass)) %>%
-  ggplot(aes(x = AgeCat,
-             y = OnlineClass, 
-             fill = Connection)) +
-  geom_boxplot() +
-  facet_wrap(vars(Connection))+
-  labs(x = "Age Category", 
-       y = "", 
-       title = "Average Amount of Hours Spent in Class by Age")
-newdataset 
+dataset %>% 
+  group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
+  summarise(avgmedia = mean(SocialMedia)) %>%
+  ggplot(aes(x = avgmedia, 
+             y = avgsleep, 
+             color = AgeCat)) +
+  geom_jitter() +
+  facet_wrap(vars(AgeCat)) +
+  labs(y = "", 
+       x = "Average Hours of Media Use", 
+       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        legend.position = "none")+
+  scale_color_viridis_d()
 ```
 
 

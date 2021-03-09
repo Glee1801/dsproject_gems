@@ -71,7 +71,7 @@ dataset
 
 ```{r}
 
-
+#in project file 
 dataset %>%
   group_by(Age, HealthIssue, Connection) %>%
   summarise(avgclasstime = mean(OnlineClass)) %>%
@@ -117,6 +117,7 @@ dataset %>%
 ###preferred graph 
 
 #decrease complexity of this graph; take out connection? use above graph probably 
+# in project file updated 
 
 dataset %>%
   group_by(AgeCat, Connection, Region) %>% 
