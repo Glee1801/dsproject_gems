@@ -48,6 +48,8 @@ View(dataset)
 
 ```
 
+Add paragraph here talking about the dataset background and background to covid-19. 
+
 ```{r}
 #demographics
 dataset %>% 
@@ -58,6 +60,8 @@ dataset %>%
 
 ```
 
+We noticed that most of the survey respondents were young, etc. From research paper: the total number of respondents was ___. 
+
 ```{r}
 #demographics
 dataset %>% 
@@ -66,40 +70,18 @@ dataset %>%
   labs(title = "Number of Survey Respondents by Region", x = "", y = "")
 ```
 
-```{r}
+Observations about this plot. Describe NCR (National Capital Region), because Delhi is the Capital of India. The city is the center and the NCR is slightly larger than the urban area itself. 
 
+
+```{r}
 #not from test file
 dataset %>% 
-  group_by(Age) %>% 
-  
-  ggplot(aes(x = Age, y = avgsleep)) +
-  geom_col() +
-  # facet_wrap(vars(Age)) +
-  labs(title = "Connection With Loved Ones", 
-       subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives")
-
-```
-
-```{r}
-
-#was in test file 
-
-dataset %>%
-  group_by(Age, Connection) %>%
-  summarise(avgclasstime = mean(OnlineClass)) %>%
-  ggplot(aes(x = Age,
-             y = avgclasstime, 
-             color = Connection)) +
+  ggplot(aes(x = Age, y = Sleep)) +
   geom_jitter() +
-  # facet_wrap(vars(Connection))+
-  labs(x = "Age", 
-       y = "", 
-       title = "Average Amount of Hours Spent in Class by Age")
-
-
-
-
+  # facet_wrap(vars(Age)) +
+  labs(title = "Age and Sleep")
 ```
+
 
 
 ```{r}
@@ -119,29 +101,10 @@ dataset %>%
         plot.title.position= "plot", 
         strip.text.x = element_blank())
 
-newdataset 
-
 ```
 
 
-```{r}
-#not in project file
 
-dataset %>%
-  # mutate(str_sub())
-  group_by(AgeCat, Connection, Region) %>%
-  # summarise(avgclasstime = mean(OnlineClass)) %>%
-  ggplot(aes(x = AgeCat,
-             y = OnlineClass, 
-             fill = Connection)) +
-  geom_boxplot() +
-  facet_wrap(vars(Region))+
-  labs(x = "Age", 
-       y = "", 
-       title = "Average Amount of Hours Spent in Class by Age")
-newdataset 
-
-```
 
 ```{r}
 dataset %>% 
