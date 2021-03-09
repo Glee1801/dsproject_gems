@@ -48,6 +48,22 @@ View(dataset)
 
 ```
 
+```{r}
+#demographics
+dataset %>% 
+  ggplot(aes(x = Age)) +
+  geom_bar(fill = "steelblue1") +
+  labs(title = "Number of Survey Respondents by Age", x = "Age", y = "")
+
+```
+
+```{r}
+#demographics
+dataset %>% 
+  ggplot(aes(x = Region)) +
+  geom_bar(fill = "steelblue1") +
+  labs(title = "Number of Survey Respondents by Region", x = "", y = "")
+```
 
 ```{r}
 
