@@ -79,8 +79,7 @@ dataset %>%
   labs(title = "Number of Survey Respondents by Region", x = "", y = "")
 ```
 
-Observations about this plot. Describe NCR (National Capital Region), because Delhi is the Capital of India. The city is the center and the NCR is slightly larger than the urban area itself. 
-
+Observations about this plot. 
 
 ```{r}
 #not from test file
@@ -156,3 +155,24 @@ dataset %>%
 ```
 
 
+
+
+
+```{r}
+
+dataset %>% 
+  select(AgeCat, SocialMedia, Connection) %>% 
+  group_by(AgeCat, Connection) %>% 
+  summarize(avg_time_sm = mean(SocialMedia)) %>% 
+  ggplot(aes(x = AgeCat, y = avg_time_sm,
+             fill = Connection)) +
+  geom_col(position = "dodge") +
+  #geom_boxplot() +
+  labs(title = "Average Hours Spent On Social Media and Connection With Loved Ones Per Age Group",
+       x = "",
+       y = "") +
+  theme(plot.title = element_text(size = 12))
+  
+```
+
+With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's accessible to them). In the graph below, we used the data set to see if there is a strong relationship between the average time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that between the different age groups, the results vary, and the average time spent on social media does not exactly determine whether or not there is a connection with loved ones. This can demonstrate that the connections made with loved ones do not merely come from social media interactions, nor are they a result of having to stay home with loved ones everyday. Indeed, that connection can be a result of anything depending on the individual. 
