@@ -92,17 +92,16 @@ dataset %>%
 dataset %>%
   group_by(AgeCat, Connection, Region) %>% 
   ggplot(aes(x = AgeCat,
-             y = OnlineClass, 
-             fill = Connection)) +
+             y = OnlineClass)) +
   geom_boxplot() +
-  facet_wrap(vars(Connection))+
   labs(x = "Age", 
        y = "", 
-       title = "Comparing Median Hours Spent in Class Per Day \n by Age and Connection to Loved Ones") +
+       title = "Comparing Hours Spent in Class Per Day by Age") +
   theme(axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot", 
         strip.text.x = element_blank())
+
 newdataset 
 
 ```
