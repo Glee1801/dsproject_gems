@@ -41,20 +41,14 @@ View(dataset)
 
 
 ```{r}
-
-
-newdataest<- dataset %>% 
+dataset %>% 
   group_by(Age) %>% 
-  mutate(avgsleep = mean(Sleep))
-
-newdataest %>% 
+  
   ggplot(aes(x = Age, y = avgsleep)) +
   geom_col() +
   # facet_wrap(vars(Age)) +
   labs(title = "Connection With Loved Ones", 
        subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives")
-
-newdataest
 
 ```
 
