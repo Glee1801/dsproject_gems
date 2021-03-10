@@ -113,7 +113,7 @@ dataset %>%
   group_by(AgeCat, Connection, Region) %>% 
   ggplot(aes(x = AgeCat,
              y = OnlineClass)) +
-  geom_boxplot() +
+  geom_boxplot(color = "midnightblue", fill = "steelblue1", alpha = .5) +
   labs(x = "Age", 
        y = "", 
        title = "Comparing Hours Spent in Class Per Day by Age") +
