@@ -83,6 +83,9 @@ dataset %>%
   labs(x = "Age", 
        y = "", 
        title = "Average Amount of Hours Spent in Class by Age")
+
+#not used
+
 ```
 
 
@@ -95,6 +98,9 @@ dataset %>%
   labs(title = "Average Class Rating by Course Medium", 
        x = "", 
        y = "")
+
+#not used 
+
 ```
 
 
@@ -165,6 +171,7 @@ dataset %>%
 
 #boxplot only one that shows y values correctly (not in 100s like geom_col)
 # doesn't show differences in media use though 
+#not used 
 
 ```
 
