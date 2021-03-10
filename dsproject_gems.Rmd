@@ -153,22 +153,33 @@ dataset %>%
 ```{r}
 #scatterplot 
 
-dataset %>% 
+sleepmedia_anim <- dataset %>% 
   group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
   summarise(avgmedia = mean(SocialMedia)) %>%
-  ggplot(aes(x = avgmedia, 
-             y = avgsleep, 
-             color = AgeCat)) +
+  ggplot(aes(x = Sleep, 
+             y = SocialMedia, 
+             color = AgeCat, 
+             group = AgeCat)) +
   geom_jitter() +
-  facet_wrap(vars(AgeCat)) +
   labs(y = "", 
-       x = "Average Hours of Media Use", 
-       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+       x = "Hours of Sleep", 
+       title = "Amount of Sleep and Corresponding Social Media Use in Hours by Age Category", 
+       subtitle = "Ages: {closest_state}") +
+  transition_states(AgeCat)+
   theme(axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot", 
         legend.position = "none")+
-  scale_color_viridis_d()
+  scale_color_viridis_d() +
+  exit_fade() +
+  enter_recolor(color = "aliceblue") +
+  exit_recolor(color = "aliceblue")
+
+animate(sleepmedia_anim, duration = 20)
+
+anim_save("sleepmedia_anim.gif")
 ```
 
-
+```{r}
+knitr::include_graphics("sleepmedia_anim.gif")
+```
