@@ -78,7 +78,13 @@ dataset %>%
     n = "Respondents") %>% 
   summary_rows(columns = vars(Age, n),
     fns = list(
-      total = ~sum(., na.rm = TRUE)),decimals = 0)
+      total = ~sum(., na.rm = TRUE)),decimals = 0) %>% 
+  tab_style(
+    style = list(
+      cell_fill(color = "steelblue1")
+    ),
+    locations = cells_body(
+      rows = c(13,14,15,16)))
 ```
 
 We noticed that most of the survey respondents were young, etc. From research paper: the total number of respondents was ___. 
