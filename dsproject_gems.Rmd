@@ -142,27 +142,8 @@ dataset %>%
 ```
 
 
-```{r}
-dataset %>% 
-  ggplot(aes(x = SocialCat, 
-             y = Sleep, 
-             color = AgeCat)) +
-  geom_boxplot() +
-  # facet_wrap(vars(AgeCat)) +
-  labs(y = "", 
-       x = "", 
-       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
-  theme(axis.line = element_blank(), 
-        panel.grid = element_blank(), 
-        plot.title.position= "plot", 
-        legend.position = "none")+
-  scale_color_viridis_d()
-  
-```
-
 
 ```{r}
-#scatterplot 
 
 sleepmedia_anim <- dataset %>% 
   group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
