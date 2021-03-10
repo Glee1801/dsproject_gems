@@ -32,6 +32,7 @@ library(plotly)        # for the ggplotly() - basic interactivity
 library(gganimate)     # for adding animation layers to ggplots
 library(transformr)
 library(ggimage)
+library(gt)            # for creating nice tables
 theme_set(theme_minimal())
 ```
 
@@ -77,6 +78,18 @@ dataset %>%
   ggplot(aes(x = Region)) +
   geom_bar(fill = "steelblue1") +
   labs(title = "Number of Survey Respondents by Region", x = "", y = "")
+
+dataset %>% 
+  group_by(Age) %>%
+  tally() %>% 
+  gt(rowname_col = "Age")%>% 
+  tab_header("Number of Respondents by Age") %>% 
+  tab_stubhead(label="Age") %>%
+  cols_label(
+    n = "Respondents") %>% 
+  summary_rows(columns = vars(Age, n),
+    fns = list(
+      total = ~sum(., na.rm = TRUE)),decimals = 0)
 ```
 
 Observations about this plot. Describe NCR (National Capital Region), because Delhi is the Capital of India. The city is the center and the NCR is slightly larger than the urban area itself. 
@@ -111,8 +124,6 @@ dataset %>%
         strip.text.x = element_blank())
 
 ```
-
-
 
 
 ```{r}
