@@ -131,14 +131,11 @@ This plot compares the median number of hours spent in class by different age gr
 
 
 ```{r}
-#in project file 
-#preferred graph 
-
 dataset %>%
   group_by(AgeCat, Connection, Region) %>% 
   ggplot(aes(x = AgeCat,
              y = OnlineClass)) +
-  geom_boxplot(color = "midnightblue", fill = "steelblue1", alpha = .5) +
+  geom_boxplot(color = "steelblue", fill = "steelblue1", alpha = .5) +
   labs(x = "Age", 
        y = "", 
        title = "Comparing Hours Spent in Class Per Day by Age") +
