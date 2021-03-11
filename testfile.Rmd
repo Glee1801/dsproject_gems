@@ -83,6 +83,9 @@ dataset %>%
   labs(x = "Age", 
        y = "", 
        title = "Average Amount of Hours Spent in Class by Age")
+
+#not used
+
 ```
 
 
@@ -95,19 +98,27 @@ dataset %>%
   labs(title = "Average Class Rating by Course Medium", 
        x = "", 
        y = "")
+
+#not used 
+
 ```
 
 
 
 ```{r}
 
-dataset %>% 
-  ggplot(aes(x = AgeCat, y = OnlineClass)) +
-  geom_boxplot() +
-  # facet_wrap(vars(Age)) +
-  labs(title = "Connection With Loved Ones", 
-       subtitle = "Students Who Find Themselves More Connected with Family, Close Friends, and Relatives", 
-       x = "Age")
+dataset %>%
+  group_by(AgeCat, Connection, Region) %>% 
+  ggplot(aes(x = AgeCat,
+             y = OnlineClass)) +
+  geom_boxplot(color = "midnightblue", fill = "steelblue1", alpha = .5) +
+  labs(x = "Age", 
+       y = "", 
+       title = "Comparing Hours Spent in Class Per Day by Age") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank())
 
 
 ```
@@ -143,8 +154,8 @@ newdataset
 ```{r}
 
 dataset %>% 
-  ggplot(aes(x = SocialCat, 
-             y = Sleep, 
+  ggplot(aes(x = Sleep, 
+             y = SocialCat, 
              color = AgeCat)) +
   geom_boxplot() +
   # facet_wrap(vars(AgeCat)) +
@@ -160,26 +171,34 @@ dataset %>%
 
 #boxplot only one that shows y values correctly (not in 100s like geom_col)
 # doesn't show differences in media use though 
+#not used 
 
 ```
 
-```{r}
-dataset %>% 
+```{r, eval = FALSE}
+
+
+sleepmedia_anim <- dataset %>% 
   group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
   summarise(avgmedia = mean(SocialMedia)) %>%
-  ggplot(aes(x = avgmedia, 
-             y = avgsleep, 
-             color = AgeCat)) +
+  ggplot(aes(x = Sleep, 
+             y = SocialMedia, 
+             color = AgeCat, 
+             group = AgeCat)) +
   geom_jitter() +
-  facet_wrap(vars(AgeCat)) +
   labs(y = "", 
-       x = "Average Hours of Media Use", 
-       title = "Average Amount of Sleep and Media Use in Hours by Age Category") +
+       x = "Hours of Sleep", 
+       title = "Amount of Sleep and Corresponding Social Media Use in Hours by Age Category", 
+       subtitle = "Ages: {closest_state}") +
+  transition_states(AgeCat)+
   theme(axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot", 
         legend.position = "none")+
-  scale_color_viridis_d()
+  scale_color_viridis_d() +
+  exit_fade() +
+  enter_recolor(color = "aliceblue") +
+  exit_recolor(color = "aliceblue")
 
 
 #use AgeCat to graph?
@@ -187,8 +206,15 @@ dataset %>%
 #overall, increased media use seems to = less sleep 
 #won't show avg sleep and seems to show a cumulative or sum of sleep ?
 
+animate(sleepmedia_anim, duration = 20)
+
+anim_save("sleepmedia_anim.gif")
+
 ```
 
+```{r}
+knitr::include_graphics("sleepmedia_anim.gif")
+```
 
 
 
