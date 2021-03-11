@@ -89,32 +89,16 @@ ggplotly(dataset %>%
         strip.text.x = element_blank()))
 
 dataset %>% 
-  group_by(Age) %>%
-  tally() %>% 
-  gt(rowname_col = "Age")%>% 
-  tab_header("Number of Respondents by Age") %>% 
-  tab_stubhead(label="Age") %>%
-  cols_label(
-    n = "Respondents")
-  summary_rows(columns = vars(Age, n),
-    fns = list(
-      total = ~sum(., na.rm = TRUE)),decimals = 0) %>% 
-  tab_style(
-    style = list(
-      cell_fill(color = "steelblue1")
-    ),
-    locations = cells_body(
-      rows = c(13,14,15,16)))
-  
-dataset %>% 
   count(AgeCat) %>% 
   mutate(prop = n/sum(n)) %>% 
   gt(rowname_col = "AgeCat")%>% 
   tab_header("Respondents by Age Group") %>% 
   tab_stubhead(label="Age Group") %>%
-  cols_hide(columns = vars(n)) %>% 
   fmt_percent(columns = vars(prop), decimals = 3) %>% 
-  cols_label(n = "", prop="Percentage")
+  cols_label(n = "Respondents", prop="Proportion") %>% 
+  summary_rows(columns = vars(AgeCat, n),
+    fns = list(
+      total = ~sum(., na.rm = TRUE)),decimals = 0)
 ```
 
 We noticed that most of the survey respondents were young, etc. From research paper: the total number of respondents was ___. 
