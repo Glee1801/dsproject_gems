@@ -10,6 +10,7 @@ output:
     df_print: paged
     code_download: true
     code_folding: hide
+    theme: cosmo
 ---
 
 
@@ -215,18 +216,18 @@ dataset <- read_csv("Data.csv") %>%
 #View(dataset)
 ```
 
-COVID-19 Implications on Mental Health in the U.S.
+## **COVID-19 Implications on Mental Health in the U.S.**
 
 Within the United States, the rise of remote learning has called for additional attention on students’ mental health as they experience a lack of social interaction, less direct support from teachers, and difficulty focusing at home. Aside from academics, the mental well-being of all youth in general has also been negatively affected as children and their families are asked to self-quarantine and in some cases, leave their jobs. Health experts are now concerned about the mental health conditions for our youth in the long run. They believe that experiencing and living in these tough situations for an extended amount of time can cause children to have anxiety and depression which is why we need to start paying close attention to negative impacts of COVID-19 on mental health.  For more information regarding this issue, you may read the article provided in this [link](https://www.writingcity.com/how-remote-learning-affects-students-mental-health.html)
 
-Implications in India
+## **Implications in India**
 
 As Americans, we have seen and experienced the pandemic’s implications on mental health within the United States, but it leaves us quite curious about the present circumstances elsewhere. While searching for new research and data sets, we stumbled upon a relatively recent research done in Delhi, the capital territory of India. Data was also collected from subjects living in the National Capital Region (NCR) which encompasses both Delhi and its surrounding area. In this study, researchers looked at different age-groups of a total of 1,182 subjects, ages ranging from 7 to 59 years old, and how several aspects of their lives were affected after the lockdown. Additionally, they recorded the different coping mechanisms adopted due to such sudden changes. The various variables such as learning hours for online classes and self-study, duration of sleep, time spent on fitness and sleep were recorded and analysed as factors related to mental health. Although the effect on students’ education, social life, physical health, and mental well-being was expected, this research suggests that the public should take necessary measures to prevent psychological problems and improve students’ experiences in and outside of academics, for our current results are not meeting the expectations of the initial government policies. For specific details on the demographics, objectives, and methods of this study, please read the research paper linked [here] (https://www.researchgate.net/publication/347935769_COVID-19_and_its_impact_on_education_social_life_and_mental_health_of_students_A_Survey) 
 
 Although the researchers in this study did a phenomenal job at creating, designing, and interpreting their own plots, we decided to ask different questions and explore our own interests by using the same data set while still acknowledging their remarkable findings. 
 
 
-**Demographics:**
+### **Demographics:**
 
 Before exploring the data set, it's important to first acknowledge that there is indeed a demographic imbalance. Of the 1,182 respondents, the research paper states that 84.3% of those subjects were 7 to 22 years of age with the mean age being 20.16 years old. This bar plot visually demonstrates that most of the data comes from school-age children and teenagers. This imbalance is understandable considering that the aim of this study was to research COVID-19 implications on the education, social life, and mental health of students. However, comparing different variables across multiple age-groups gets quite complicated and can be misleading if not carefully examined.  
 
@@ -246,8 +247,8 @@ ggplotly(dataset %>%
 ```
 
 ```{=html}
-<div id="htmlwidget-c3e946c75c98d2aac042" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c3e946c75c98d2aac042">{"x":{"data":[{"orientation":"v","width":[0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.900000000000002,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,42,43,44,45,46,50,52,59],"y":[1,2,2,4,6,29,48,48,37,67,58,66,138,211,188,93,44,23,12,12,6,7,4,8,4,10,5,10,4,5,2,4,1,14,1,2,1,1,1,1,1,1],"text":["count:   1<br />Age:  7","count:   2<br />Age:  8","count:   2<br />Age:  9","count:   4<br />Age: 10","count:   6<br />Age: 11","count:  29<br />Age: 12","count:  48<br />Age: 13","count:  48<br />Age: 14","count:  37<br />Age: 15","count:  67<br />Age: 16","count:  58<br />Age: 17","count:  66<br />Age: 18","count: 138<br />Age: 19","count: 211<br />Age: 20","count: 188<br />Age: 21","count:  93<br />Age: 22","count:  44<br />Age: 23","count:  23<br />Age: 24","count:  12<br />Age: 25","count:  12<br />Age: 26","count:   6<br />Age: 27","count:   7<br />Age: 28","count:   4<br />Age: 29","count:   8<br />Age: 30","count:   4<br />Age: 31","count:  10<br />Age: 32","count:   5<br />Age: 33","count:  10<br />Age: 34","count:   4<br />Age: 35","count:   5<br />Age: 36","count:   2<br />Age: 37","count:   4<br />Age: 38","count:   1<br />Age: 39","count:  14<br />Age: 40","count:   1<br />Age: 42","count:   2<br />Age: 43","count:   1<br />Age: 44","count:   1<br />Age: 45","count:   1<br />Age: 46","count:   1<br />Age: 50","count:   1<br />Age: 52","count:   1<br />Age: 59"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(99,184,255,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Age","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[3.905,62.095],"tickmode":"array","ticktext":["5","10","15","20","25","30","35","40","45","50","55","60"],"tickvals":[5,10,15,20,25,30,35,40,45,50,55,60],"categoryorder":"array","categoryarray":["5","10","15","20","25","30","35","40","45","50","55","60"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-10.55,221.55],"tickmode":"array","ticktext":["0","50","100","150","200"],"tickvals":[0,50,100,150,200],"categoryorder":"array","categoryarray":["0","50","100","150","200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"20dc77a87366":{"x":{},"type":"bar"}},"cur_data":"20dc77a87366","visdat":{"20dc77a87366":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8e830450c06e7259357e" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8e830450c06e7259357e">{"x":{"data":[{"orientation":"v","width":[0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.900000000000002,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,42,43,44,45,46,50,52,59],"y":[1,2,2,4,6,29,48,48,37,67,58,66,138,211,188,93,44,23,12,12,6,7,4,8,4,10,5,10,4,5,2,4,1,14,1,2,1,1,1,1,1,1],"text":["count:   1<br />Age:  7","count:   2<br />Age:  8","count:   2<br />Age:  9","count:   4<br />Age: 10","count:   6<br />Age: 11","count:  29<br />Age: 12","count:  48<br />Age: 13","count:  48<br />Age: 14","count:  37<br />Age: 15","count:  67<br />Age: 16","count:  58<br />Age: 17","count:  66<br />Age: 18","count: 138<br />Age: 19","count: 211<br />Age: 20","count: 188<br />Age: 21","count:  93<br />Age: 22","count:  44<br />Age: 23","count:  23<br />Age: 24","count:  12<br />Age: 25","count:  12<br />Age: 26","count:   6<br />Age: 27","count:   7<br />Age: 28","count:   4<br />Age: 29","count:   8<br />Age: 30","count:   4<br />Age: 31","count:  10<br />Age: 32","count:   5<br />Age: 33","count:  10<br />Age: 34","count:   4<br />Age: 35","count:   5<br />Age: 36","count:   2<br />Age: 37","count:   4<br />Age: 38","count:   1<br />Age: 39","count:  14<br />Age: 40","count:   1<br />Age: 42","count:   2<br />Age: 43","count:   1<br />Age: 44","count:   1<br />Age: 45","count:   1<br />Age: 46","count:   1<br />Age: 50","count:   1<br />Age: 52","count:   1<br />Age: 59"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(99,184,255,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Age","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[3.905,62.095],"tickmode":"array","ticktext":["5","10","15","20","25","30","35","40","45","50","55","60"],"tickvals":[5,10,15,20,25,30,35,40,45,50,55,60],"categoryorder":"array","categoryarray":["5","10","15","20","25","30","35","40","45","50","55","60"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-10.55,221.55],"tickmode":"array","ticktext":["0","50","100","150","200"],"tickvals":[0,50,100,150,200],"categoryorder":"array","categoryarray":["0","50","100","150","200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"24b4757b4036":{"x":{},"type":"bar"}},"cur_data":"24b4757b4036","visdat":{"24b4757b4036":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ```
 
 ```r
@@ -269,7 +270,7 @@ dataset %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#djghyskacf .gt_table {
+#odeqaoszvd .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -294,7 +295,7 @@ dataset %>%
   border-left-color: #D3D3D3;
 }
 
-#djghyskacf .gt_heading {
+#odeqaoszvd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -306,7 +307,7 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#djghyskacf .gt_title {
+#odeqaoszvd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -316,7 +317,7 @@ dataset %>%
   border-bottom-width: 0;
 }
 
-#djghyskacf .gt_subtitle {
+#odeqaoszvd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -326,13 +327,13 @@ dataset %>%
   border-top-width: 0;
 }
 
-#djghyskacf .gt_bottom_border {
+#odeqaoszvd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#djghyskacf .gt_col_headings {
+#odeqaoszvd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -347,7 +348,7 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#djghyskacf .gt_col_heading {
+#odeqaoszvd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -367,7 +368,7 @@ dataset %>%
   overflow-x: hidden;
 }
 
-#djghyskacf .gt_column_spanner_outer {
+#odeqaoszvd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -379,15 +380,15 @@ dataset %>%
   padding-right: 4px;
 }
 
-#djghyskacf .gt_column_spanner_outer:first-child {
+#odeqaoszvd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#djghyskacf .gt_column_spanner_outer:last-child {
+#odeqaoszvd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#djghyskacf .gt_column_spanner {
+#odeqaoszvd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -399,7 +400,7 @@ dataset %>%
   width: 100%;
 }
 
-#djghyskacf .gt_group_heading {
+#odeqaoszvd .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -421,7 +422,7 @@ dataset %>%
   vertical-align: middle;
 }
 
-#djghyskacf .gt_empty_group_heading {
+#odeqaoszvd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -436,15 +437,15 @@ dataset %>%
   vertical-align: middle;
 }
 
-#djghyskacf .gt_from_md > :first-child {
+#odeqaoszvd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#djghyskacf .gt_from_md > :last-child {
+#odeqaoszvd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#djghyskacf .gt_row {
+#odeqaoszvd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -463,7 +464,7 @@ dataset %>%
   overflow-x: hidden;
 }
 
-#djghyskacf .gt_stub {
+#odeqaoszvd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -475,7 +476,7 @@ dataset %>%
   padding-left: 12px;
 }
 
-#djghyskacf .gt_summary_row {
+#odeqaoszvd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -485,7 +486,7 @@ dataset %>%
   padding-right: 5px;
 }
 
-#djghyskacf .gt_first_summary_row {
+#odeqaoszvd .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -495,7 +496,7 @@ dataset %>%
   border-top-color: #D3D3D3;
 }
 
-#djghyskacf .gt_grand_summary_row {
+#odeqaoszvd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -505,7 +506,7 @@ dataset %>%
   padding-right: 5px;
 }
 
-#djghyskacf .gt_first_grand_summary_row {
+#odeqaoszvd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -515,11 +516,11 @@ dataset %>%
   border-top-color: #D3D3D3;
 }
 
-#djghyskacf .gt_striped {
+#odeqaoszvd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#djghyskacf .gt_table_body {
+#odeqaoszvd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -528,7 +529,7 @@ dataset %>%
   border-bottom-color: #D3D3D3;
 }
 
-#djghyskacf .gt_footnotes {
+#odeqaoszvd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -542,13 +543,13 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#djghyskacf .gt_footnote {
+#odeqaoszvd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#djghyskacf .gt_sourcenotes {
+#odeqaoszvd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -562,46 +563,46 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#djghyskacf .gt_sourcenote {
+#odeqaoszvd .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#djghyskacf .gt_left {
+#odeqaoszvd .gt_left {
   text-align: left;
 }
 
-#djghyskacf .gt_center {
+#odeqaoszvd .gt_center {
   text-align: center;
 }
 
-#djghyskacf .gt_right {
+#odeqaoszvd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#djghyskacf .gt_font_normal {
+#odeqaoszvd .gt_font_normal {
   font-weight: normal;
 }
 
-#djghyskacf .gt_font_bold {
+#odeqaoszvd .gt_font_bold {
   font-weight: bold;
 }
 
-#djghyskacf .gt_font_italic {
+#odeqaoszvd .gt_font_italic {
   font-style: italic;
 }
 
-#djghyskacf .gt_super {
+#odeqaoszvd .gt_super {
   font-size: 65%;
 }
 
-#djghyskacf .gt_footnote_marks {
+#odeqaoszvd .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="djghyskacf" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="odeqaoszvd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Respondents by Age Group</th>
@@ -708,14 +709,17 @@ dataset %>%
   geom_boxplot(color = "steelblue", fill = "steelblue1", alpha = .5) +
   labs(x = "Age", 
        y = "", 
-       title = "Comparing Hours Spent in Class Per Day by Age") +
-  theme(axis.line = element_blank(), 
-        panel.grid = element_blank(), 
+       title = "Comparing Hours Spent in Class Per Day by Age", col = "grey") +
+  theme(panel.grid = element_blank(), 
         plot.title.position= "plot", 
         strip.text.x = element_blank())
 ```
 
 ![](dsproject_gems_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+
+```r
+        # plot.title = element_text(color = "midnightblue"))
+```
 
 
 
@@ -809,7 +813,7 @@ dataset %>%
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#vjglswfgtr .gt_table {
+#jbkcrkbnpi .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -834,7 +838,7 @@ dataset %>%
   border-left-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_heading {
+#jbkcrkbnpi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -846,7 +850,7 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_title {
+#jbkcrkbnpi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -856,7 +860,7 @@ dataset %>%
   border-bottom-width: 0;
 }
 
-#vjglswfgtr .gt_subtitle {
+#jbkcrkbnpi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -866,13 +870,13 @@ dataset %>%
   border-top-width: 0;
 }
 
-#vjglswfgtr .gt_bottom_border {
+#jbkcrkbnpi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_col_headings {
+#jbkcrkbnpi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -887,7 +891,7 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_col_heading {
+#jbkcrkbnpi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -907,7 +911,7 @@ dataset %>%
   overflow-x: hidden;
 }
 
-#vjglswfgtr .gt_column_spanner_outer {
+#jbkcrkbnpi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -919,15 +923,15 @@ dataset %>%
   padding-right: 4px;
 }
 
-#vjglswfgtr .gt_column_spanner_outer:first-child {
+#jbkcrkbnpi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vjglswfgtr .gt_column_spanner_outer:last-child {
+#jbkcrkbnpi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vjglswfgtr .gt_column_spanner {
+#jbkcrkbnpi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -939,7 +943,7 @@ dataset %>%
   width: 100%;
 }
 
-#vjglswfgtr .gt_group_heading {
+#jbkcrkbnpi .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -961,7 +965,7 @@ dataset %>%
   vertical-align: middle;
 }
 
-#vjglswfgtr .gt_empty_group_heading {
+#jbkcrkbnpi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -976,15 +980,15 @@ dataset %>%
   vertical-align: middle;
 }
 
-#vjglswfgtr .gt_from_md > :first-child {
+#jbkcrkbnpi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vjglswfgtr .gt_from_md > :last-child {
+#jbkcrkbnpi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vjglswfgtr .gt_row {
+#jbkcrkbnpi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1003,7 +1007,7 @@ dataset %>%
   overflow-x: hidden;
 }
 
-#vjglswfgtr .gt_stub {
+#jbkcrkbnpi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1015,7 +1019,7 @@ dataset %>%
   padding-left: 12px;
 }
 
-#vjglswfgtr .gt_summary_row {
+#jbkcrkbnpi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1025,7 +1029,7 @@ dataset %>%
   padding-right: 5px;
 }
 
-#vjglswfgtr .gt_first_summary_row {
+#jbkcrkbnpi .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1035,7 +1039,7 @@ dataset %>%
   border-top-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_grand_summary_row {
+#jbkcrkbnpi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1045,7 +1049,7 @@ dataset %>%
   padding-right: 5px;
 }
 
-#vjglswfgtr .gt_first_grand_summary_row {
+#jbkcrkbnpi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1055,11 +1059,11 @@ dataset %>%
   border-top-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_striped {
+#jbkcrkbnpi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vjglswfgtr .gt_table_body {
+#jbkcrkbnpi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1068,7 +1072,7 @@ dataset %>%
   border-bottom-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_footnotes {
+#jbkcrkbnpi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1082,13 +1086,13 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_footnote {
+#jbkcrkbnpi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vjglswfgtr .gt_sourcenotes {
+#jbkcrkbnpi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1102,46 +1106,46 @@ dataset %>%
   border-right-color: #D3D3D3;
 }
 
-#vjglswfgtr .gt_sourcenote {
+#jbkcrkbnpi .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vjglswfgtr .gt_left {
+#jbkcrkbnpi .gt_left {
   text-align: left;
 }
 
-#vjglswfgtr .gt_center {
+#jbkcrkbnpi .gt_center {
   text-align: center;
 }
 
-#vjglswfgtr .gt_right {
+#jbkcrkbnpi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vjglswfgtr .gt_font_normal {
+#jbkcrkbnpi .gt_font_normal {
   font-weight: normal;
 }
 
-#vjglswfgtr .gt_font_bold {
+#jbkcrkbnpi .gt_font_bold {
   font-weight: bold;
 }
 
-#vjglswfgtr .gt_font_italic {
+#jbkcrkbnpi .gt_font_italic {
   font-style: italic;
 }
 
-#vjglswfgtr .gt_super {
+#jbkcrkbnpi .gt_super {
   font-size: 65%;
 }
 
-#vjglswfgtr .gt_footnote_marks {
+#jbkcrkbnpi .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="vjglswfgtr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="jbkcrkbnpi" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="2" class="gt_heading gt_title gt_font_normal" style>What Respondents Miss Most</th>
@@ -1202,8 +1206,8 @@ ggplotly(dataset %>%
 ```
 
 ```{=html}
-<div id="htmlwidget-65ddcf8842a087a8689d" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-65ddcf8842a087a8689d">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0,0],"x":[1,2,3,4,5,6],"y":[99,213,143,368,169,137],"text":["count:  99<br />What respondents miss the most: Eating outside","count: 213<br />What respondents miss the most: Friends , relatives","count: 143<br />What respondents miss the most: Roaming around freely","count: 368<br />What respondents miss the most: School/college","count: 169<br />What respondents miss the most: Travelling","count: 137<br />What respondents miss the most: Other"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(173,216,230,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"What Respondents Miss the Most","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,6.6],"tickmode":"array","ticktext":["Eating outside","Friends , relatives","Roaming around freely","School/college","Travelling","Other"],"tickvals":[1,2,3,4,5,6],"categoryorder":"array","categoryarray":["Eating outside","Friends , relatives","Roaming around freely","School/college","Travelling","Other"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-18.4,386.4],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"20dc71a923a5":{"x":{},"type":"bar"}},"cur_data":"20dc71a923a5","visdat":{"20dc71a923a5":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-03c47b38df6d65a35ea2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-03c47b38df6d65a35ea2">{"x":{"data":[{"orientation":"v","width":[0.9,0.9,0.9,0.9,0.9,0.9],"base":[0,0,0,0,0,0],"x":[1,2,3,4,5,6],"y":[99,213,143,368,169,137],"text":["count:  99<br />What respondents miss the most: Eating outside","count: 213<br />What respondents miss the most: Friends , relatives","count: 143<br />What respondents miss the most: Roaming around freely","count: 368<br />What respondents miss the most: School/college","count: 169<br />What respondents miss the most: Travelling","count: 137<br />What respondents miss the most: Other"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(173,216,230,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"What Respondents Miss the Most","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,6.6],"tickmode":"array","ticktext":["Eating outside","Friends , relatives","Roaming around freely","School/college","Travelling","Other"],"tickvals":[1,2,3,4,5,6],"categoryorder":"array","categoryarray":["Eating outside","Friends , relatives","Roaming around freely","School/college","Travelling","Other"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-18.4,386.4],"tickmode":"array","ticktext":["0","100","200","300"],"tickvals":[0,100,200,300],"categoryorder":"array","categoryarray":["0","100","200","300"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"24b44cc960ca":{"x":{},"type":"bar"}},"cur_data":"24b44cc960ca","visdat":{"24b44cc960ca":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ```
 
 
