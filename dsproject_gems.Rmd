@@ -10,6 +10,7 @@ output:
     df_print: paged
     code_download: true
     code_folding: hide
+    theme: cosmo
 ---
 
 
@@ -52,18 +53,18 @@ dataset <- read_csv("Data.csv") %>%
 
 ```
 
-COVID-19 Implications on Mental Health in the U.S.
+## **COVID-19 Implications on Mental Health in the U.S.**
 
 Within the United States, the rise of remote learning has called for additional attention on students’ mental health as they experience a lack of social interaction, less direct support from teachers, and difficulty focusing at home. Aside from academics, the mental well-being of all youth in general has also been negatively affected as children and their families are asked to self-quarantine and in some cases, leave their jobs. Health experts are now concerned about the mental health conditions for our youth in the long run. They believe that experiencing and living in these tough situations for an extended amount of time can cause children to have anxiety and depression which is why we need to start paying close attention to negative impacts of COVID-19 on mental health.  For more information regarding this issue, you may read the article provided in this [link](https://www.writingcity.com/how-remote-learning-affects-students-mental-health.html)
 
-Implications in India
+## **Implications in India**
 
 As Americans, we have seen and experienced the pandemic’s implications on mental health within the United States, but it leaves us quite curious about the present circumstances elsewhere. While searching for new research and data sets, we stumbled upon a relatively recent research done in Delhi, the capital territory of India. Data was also collected from subjects living in the National Capital Region (NCR) which encompasses both Delhi and its surrounding area. In this study, researchers looked at different age-groups of a total of 1,182 subjects, ages ranging from 7 to 59 years old, and how several aspects of their lives were affected after the lockdown. Additionally, they recorded the different coping mechanisms adopted due to such sudden changes. The various variables such as learning hours for online classes and self-study, duration of sleep, time spent on fitness and sleep were recorded and analysed as factors related to mental health. Although the effect on students’ education, social life, physical health, and mental well-being was expected, this research suggests that the public should take necessary measures to prevent psychological problems and improve students’ experiences in and outside of academics, for our current results are not meeting the expectations of the initial government policies. For specific details on the demographics, objectives, and methods of this study, please read the research paper linked [here] (https://www.researchgate.net/publication/347935769_COVID-19_and_its_impact_on_education_social_life_and_mental_health_of_students_A_Survey) 
 
 Although the researchers in this study did a phenomenal job at creating, designing, and interpreting their own plots, we decided to ask different questions and explore our own interests by using the same data set while still acknowledging their remarkable findings. 
 
 
-**Demographics:**
+### **Demographics:**
 
 Before exploring the data set, it's important to first acknowledge that there is indeed a demographic imbalance. Of the 1,182 respondents, the research paper states that 84.3% of those subjects were 7 to 22 years of age with the mean age being 20.16 years old. This bar plot visually demonstrates that most of the data comes from school-age children and teenagers. This imbalance is understandable considering that the aim of this study was to research COVID-19 implications on the education, social life, and mental health of students. However, comparing different variables across multiple age-groups gets quite complicated and can be misleading if not carefully examined.  
 
@@ -136,11 +137,11 @@ dataset %>%
   geom_boxplot(color = "steelblue", fill = "steelblue1", alpha = .5) +
   labs(x = "Age", 
        y = "", 
-       title = "Comparing Hours Spent in Class Per Day by Age") +
-  theme(axis.line = element_blank(), 
-        panel.grid = element_blank(), 
+       title = "Comparing Hours Spent in Class Per Day by Age", col = "grey") +
+  theme(panel.grid = element_blank(), 
         plot.title.position= "plot", 
         strip.text.x = element_blank())
+        # plot.title = element_text(color = "midnightblue"))
 
 ```
 
@@ -352,8 +353,11 @@ dataset %>%
   labs(title = "Average Hours Spent On Social Media and Connection With Loved Ones Per Age Group",
        x = "",
        y = "") +
-  theme(plot.title = element_text(size = 12))
-  
+  theme(plot.title = element_text(size = 12),
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+ 
 ```
 
 With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's accessible to them). In the graph below, we used the data set to see if there is a strong relationship between the average time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that between the different age groups, the results vary, and the average time spent on social media does not exactly determine whether or not there is a connection with loved ones. This can demonstrate that the connections made with loved ones do not merely come from social media interactions, nor are they a result of having to stay home with loved ones everyday. Indeed, that connection can be a result of anything depending on the individual. 
