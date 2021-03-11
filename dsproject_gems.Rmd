@@ -257,6 +257,9 @@ ag1 <- dataset %>%
   mutate(prop=n/89*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 0-13") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -272,6 +275,9 @@ ag2 <- dataset %>%
   mutate(prop=n/265*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 14-18") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -287,6 +293,9 @@ ag3 <- dataset %>%
   mutate(prop=n/645*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 19-23") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -302,6 +311,9 @@ ag4 <- dataset %>%
   mutate(prop=n/84*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 24-33") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -317,6 +329,9 @@ ag5 <- dataset %>%
   mutate(prop=n/42*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 34-45") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -332,14 +347,18 @@ ag6 <- dataset %>%
   mutate(prop=n/4*100) %>% 
   ggplot()+
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  labs(x = "", 
+       y = "", 
+       title = "Ages 46-60") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot")
 ```
 
+
 ```{r, fig.width=10, fig.height=11}
 #pacth together graphs, have the mess around with the size when knitting to make it readable, we can also make it less categories if we want
-(ag1|ag2| ag3)/(ag4 |ag5 |ag6) +
-  plot_annotation("Fun Garden Data Graphs!")
+(ag1|ag2) / (ag3|ag4) / (ag5 |ag6) +
+  plot_annotation("What Respondents Miss the Most: Proportionally by Age Group")
 ```
