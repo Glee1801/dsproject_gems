@@ -32,6 +32,8 @@ library(plotly)        # for the ggplotly() - basic interactivity
 library(gganimate)     # for adding animation layers to ggplots
 library(transformr)
 library(ggimage)
+library(ggtext)
+library(patchwork)
 library(gt)            # for creating nice tables
 theme_set(theme_minimal())
 ```
