@@ -190,7 +190,7 @@ ggplotly(dataset %>%
            drop_na() %>%
            mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
            ggplot()+
-           geom_bar(aes(x=`What respondents miss the most`), fill="deeppink4") +
+           geom_bar(aes(x=`What respondents miss the most`), fill="lightblue") +
            labs(x = "", 
                 y = "", 
                 title = "What Respondents Miss the Most") +
