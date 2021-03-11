@@ -46,7 +46,7 @@ dataset <- read_csv("Data.csv") %>%
   
 #labels = "0-1", "1-3", "3-10" label social media 
 
-View(dataset)
+#View(dataset)
 
 ```
 
@@ -78,6 +78,16 @@ dataset %>%
         plot.title.position= "plot", 
         strip.text.x = element_blank())
 
+ggplotly(dataset %>% 
+  ggplot(aes(x = Age)) +
+  geom_bar(fill = "steelblue1") +
+  scale_x_continuous(name = "", breaks = c(5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60)) +
+  labs(title = "Number of Survey Respondents by Age", x = "Age", y = "") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank()))
+
 dataset %>% 
   group_by(Age) %>%
   tally() %>% 
@@ -85,7 +95,7 @@ dataset %>%
   tab_header("Number of Respondents by Age") %>% 
   tab_stubhead(label="Age") %>%
   cols_label(
-    n = "Respondents") %>% 
+    n = "Respondents")
   summary_rows(columns = vars(Age, n),
     fns = list(
       total = ~sum(., na.rm = TRUE)),decimals = 0) %>% 
@@ -95,6 +105,16 @@ dataset %>%
     ),
     locations = cells_body(
       rows = c(13,14,15,16)))
+  
+dataset %>% 
+  count(AgeCat) %>% 
+  mutate(prop = n/sum(n)) %>% 
+  gt(rowname_col = "AgeCat")%>% 
+  tab_header("Respondents by Age Group") %>% 
+  tab_stubhead(label="Age Group") %>%
+  cols_hide(columns = vars(n)) %>% 
+  fmt_percent(columns = vars(prop), decimals = 3) %>% 
+  cols_label(n = "", prop="Percentage")
 ```
 
 We noticed that most of the survey respondents were young, etc. From research paper: the total number of respondents was ___. 
@@ -179,4 +199,147 @@ anim_save("sleepmedia_anim.gif")
 
 ```{r}
 knitr::include_graphics("sleepmedia_anim.gif")
+```
+
+```{r}
+dataset %>%
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  #filter(`What respondents miss the most` != "Other")  %>%
+  count(`What respondents miss the most`, sort=TRUE) %>% 
+  gt(rowname_col = "`What respondents miss the most`")%>% 
+  tab_header("What Respondents Miss Most") %>% 
+  cols_label(`What respondents miss the most`="",
+             n = "")
+
+ggplotly(dataset %>%
+           drop_na() %>%
+           mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+           ggplot()+
+           geom_bar(aes(x=`What respondents miss the most`), fill="deeppink4") +
+           labs(x = "", 
+                y = "", 
+                title = "What Respondents Miss the Most") +
+           theme(panel.grid = element_blank(), 
+                 plot.title.position= "plot",
+                 legend.position="none"))
+```
+
+```{r}
+dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  ggplot()+
+  geom_bar(position="dodge", aes(x=AgeCat, fill=Region))+
+  facet_wrap(vars(`What respondents miss the most`)) +
+  labs(
+    title = "What Respondents Miss Most by Age Group
+    <span style='color:#F8766D;'>in Dehli</span>
+    <span>and 
+    <span style='color:#00BFC4;'>Outside Dehli</span>",
+    x = "Age Group", y = "") +
+  theme_minimal() +
+  theme(plot.title = element_markdown(),
+        legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+```
+
+```{r}
+#within AgeCat=0-13, what percentage said what:
+ag1 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="0-13") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/89*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+
+#within AgeCat=14-18, what percentage said what:
+ag2 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="14-18") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/265*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+
+#within AgeCat=19-23, what percentage said what:
+ag3 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="19-23") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/645*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+
+#within AgeCat=24-33, what percentage said what:
+ag4 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="24-33") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/84*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+
+#within AgeCat=34-45, what percentage said what:
+ag5 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="34-45") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/42*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+
+#within AgeCat=46-60, what percentage said what:
+ag6 <- dataset %>% 
+  drop_na() %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(AgeCat=="46-60") %>%
+  group_by(AgeCat,`What respondents miss the most`) %>% 
+  count(sort=TRUE)  %>%
+  mutate(prop=n/4*100) %>% 
+  ggplot()+
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  theme(legend.position = "none",
+        axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot")
+```
+
+```{r, fig.width=10, fig.height=11}
+#pacth together graphs, have the mess around with the size when knitting to make it readable, we can also make it less categories if we want
+(ag1|ag2| ag3)/(ag4 |ag5 |ag6) +
+  plot_annotation("Fun Garden Data Graphs!")
 ```
