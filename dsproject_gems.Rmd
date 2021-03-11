@@ -81,6 +81,8 @@ ggplotly(dataset %>%
         plot.title.position= "plot", 
         strip.text.x = element_blank()))
 
+
+
 dataset %>% 
   count(AgeCat) %>% 
   mutate(prop = n/sum(n)) %>% 
@@ -98,8 +100,8 @@ dataset %>%
 
 
 
-
 Just as we observed with the previous plot, the number of respondents per region of residence also differs. This plot displays that there is indeed quite a significant difference between Delhi-NCR respondents and respondents living outside of the Delhi-NCR. Although the online-survey was originally aimed at institutions within the Delhi-NCR region, a significant number of responses from outside of Delhi-NCR was received, for distance-learning regulations forced many students to move out of homes and institutions to reside elsewhere. Of the total number of respondents, 38.3% were living outside of the Delhi-NCR.
+
 
 ```{r}
 #demographics
@@ -147,6 +149,18 @@ dataset %>%
 
 
 
+### **Social Media Use, Sleep and Mental Health Outcomes:**
+
+
+In a recent study examining the relationship between sleep and mental health and sleep in college students, researchers found that different mental health symptoms had different patterns of association with poor sleep. They found an association between anxiety and depression symptoms and sleep, but found that mental health conditions only affected certain effects of poor sleep. This study also emphasizes that the effects of poor mental health could be exacerbated by inadequate sleeping hours or poor sleep. Previous research has shown that improving sleep for students may also improve mood. (Becker et al., 2018). 
+
+
+A correlational study from 2018 examined the association of outcomes of social media use in young adults such as general mental health symptoms, loneliness, suicidal thoughts, and a change in empathy, and found that concerns regarding social media use in young adults may be misplaced. Though organizations such as the Royal Society for public health have reported evidence for links between social media use and poor mental health, this particular study did not find proof of an association. This study pointed out the difference between use of social media on mental health effects. If social media was used for negative social comparison this could lead to depression, but that authentic self-presentation could be associated with positive mental health effects. The 2018 study also stated that time spent with social media or exposure alone is not a good indicator of mental health, but instead that how the time was spent is better for analysis and identifying problems (Berryman, Ferguson, and Negy, 2018). 
+
+In the graph below we seek to examine the relationship with between time spent on social media per week and time spent sleeping per week as indicators for mental health. Due to the fact that sleep disturbance can often be an indicator or association with poor mental health outcomes, we chose to examine how these two variables interacted, and to see if this differed by age.
+
+
+
 ```{r}
 
 sleepmedia_anim <- dataset %>% 
@@ -157,7 +171,7 @@ sleepmedia_anim <- dataset %>%
              color = AgeCat, 
              group = AgeCat)) +
   geom_jitter() +
-  labs(y = "", 
+  labs(y = "Hours of Social Media Use", 
        x = "Hours of Sleep", 
        title = "Amount of Sleep and Corresponding Social Media Use in Hours by Age Category", 
        subtitle = "Ages: {closest_state}") +
@@ -179,6 +193,17 @@ anim_save("sleepmedia_anim.gif")
 ```{r}
 knitr::include_graphics("sleepmedia_anim.gif")
 ```
+
+
+
+
+
+For most of the age categories there may be a slight negative association between hours of sleep and hours of social media use. It appears that while hours of sleep go up, hours of social media use may slightly go down. For the age category 18 years - 23 years, there appears to be no association at all between amount of sleep and amount of social media use. In addition, the association is not clear for any age group, leading us to believe that the results from the COVID-19 dataset that we are using most likely follow the trnd that the 2018 study by Berryman, Ferguson, and Negy suggested, which is that there is limited proof between social media and mental health effects. It is also worth noting that difference in amount of time sleeping is not the best indicator of mental health outcomes, and another measurement like an increase anxiety or depression symptoms may be a better indicator that was not included in the data set that we used.
+
+
+
+### **Outcomes and Effects of COVID-19:**
+
 
 ```{r}
 dataset %>%
@@ -203,6 +228,12 @@ ggplotly(dataset %>%
                  plot.title.position= "plot",
                  legend.position="none"))
 ```
+
+
+
+We were interested to examine what the survey respondents missed the most during the COVID-19 pandemic, and found that throughout the many survey responses, eating outside, friends and relatives, roaming around freely, school/college,  and traveling were the most common responses to the question "What do you miss the most?". We observed that most the most common responses were also what we, as college students,  missed in the United States. It was interesting that school and/or college was the most common answer, but this answer makes sense when considering the demographics of the responses and the most common ages for response, which was school and college aged people. 
+
+
 
 ```{r}
 dataset %>% 
