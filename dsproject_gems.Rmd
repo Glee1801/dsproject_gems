@@ -72,7 +72,11 @@ dataset %>%
   ggplot(aes(x = Age)) +
   geom_bar(fill = "steelblue1") +
   scale_x_continuous(name = "", breaks = c(5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60)) +
-  labs(title = "Number of Survey Respondents by Age", x = "Age", y = "")
+  labs(title = "Number of Survey Respondents by Age", x = "Age", y = "") +
+  theme(axis.line = element_blank(), 
+        panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank())
 
 dataset %>% 
   group_by(Age) %>%
@@ -103,7 +107,11 @@ Just as we observed with the previous plot, the number of respondents per region
 dataset %>% 
   ggplot(aes(x = Region)) +
   geom_bar(fill = "steelblue1") +
-  labs(title = "Number of Survey Respondents by Region", x = "", y = "")
+  labs(title = "Number of Survey Respondents by Region", x = "", y = "") +
+  theme(panel.grid = element_blank(), 
+        plot.title.position= "plot", 
+        strip.text.x = element_blank())
+    
 ```
 
 Observations about this plot. Describe NCR (National Capital Region), because Delhi is the Capital of India. The city is the center and the NCR is slightly larger than the urban area itself. 
