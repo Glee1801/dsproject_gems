@@ -1,7 +1,7 @@
 ---
-title: "Data Science Project"
+title: "COVID-19 and the Impact Mental Health of Students"
 author: "Gaocha Lee, Elizabeth Cain, Maya Fernandez, and Stephanie Konadu-Acheampong "
-date: "3/5/2021"
+date: "3/13/2021"
 output: 
   html_document:
     keep_md: TRUE
@@ -356,6 +356,7 @@ ag5 <- dataset %>%
 ag6 <- dataset %>% 
   drop_na() %>% 
   mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="46-59") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
