@@ -88,7 +88,7 @@ dataset %>%
   mutate(prop = n/sum(n)) %>% 
   gt(rowname_col = "AgeCat")%>% 
   tab_header("Respondents by Age Group") %>% 
-  tab_stubhead(label="Age Group") %>%
+  tab_stubhead(label="Age") %>%
   fmt_percent(columns = vars(prop), decimals = 3) %>% 
   cols_label(n = "Respondents", prop="Proportion") %>% 
   summary_rows(columns = vars(AgeCat, n),
@@ -117,15 +117,6 @@ ggplotly(dataset %>%
 
 
 
-
-```{r}
-#not from test file
-dataset %>% 
-  ggplot(aes(x = Age, y = Sleep)) +
-  geom_jitter() +
-  # facet_wrap(vars(Age)) +
-  labs(title = "Age and Sleep")
-```
 
 This plot compares the median number of hours spent in class by different age groups. For the sole purpose of this study, it is important to draw attention to how many hours students are spending sitting in front of a screen each day. From this plot, we can observe that respondents within the 7-13 and 14-18 age-groups spend the most time in class per day. The researchers emphasized that different variables (time spent on online class, self-study,fitness, sleep, and social media) changes with different age distributions. Average time spent in class and age-group was one of the relationships that were inversely proportional; As age-group value increases, the average number of hours spent online starts to decrease. 
 
@@ -161,7 +152,7 @@ In the graph below we seek to examine the relationship with between time spent o
 
 
 
-```{r}
+```{r, eval=FALSE}
 
 sleepmedia_anim <- dataset %>% 
   group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
