@@ -43,7 +43,7 @@ theme_set(theme_minimal())
 ```{r}
 
 dataset <- read_csv("Data.csv") %>% 
-  mutate(AgeCat = cut(Age, breaks = c(0,13,18,23,33,45,60), labels = c("0-13", "13-18", "18-23", "23-33", "33-45", "45-60"))) %>%
+  mutate(AgeCat = cut(Age, breaks = c(0,13,18,23,33,45,60), labels = c("7-13", "13-18", "18-23", "23-33", "33-45", "45-60"))) %>%
   mutate(avgsleep = mean(Sleep)) %>% 
   mutate(SocialCat = cut_number(SocialMedia, n = 3))
   
@@ -66,7 +66,7 @@ Although the researchers in this study did a phenomenal job at creating, designi
 
 ### **Demographics:**
 
-Before exploring the data set, it's important to first acknowledge that there is indeed a demographic imbalance. Of the 1,182 respondents, the research paper states that 84.3% of those subjects were 7 to 22 years of age with the mean age being 20.16 years old. This bar plot visually demonstrates that most of the data comes from school-age children and teenagers. This imbalance is understandable considering that the aim of this study was to research COVID-19 implications on the education, social life, and mental health of students. However, comparing different variables across multiple age-groups gets quite complicated and can be misleading if not carefully examined.  
+Before exploring the data set, it's important to first acknowledge that there is indeed a demographic imbalance. Of the 1,182 respondents, the research paper states that 84.3% of those subjects were 7 to 22 years of age with the mean age being 20.16 years old. This bar plot visually demonstrates that most of the data comes from school-age children and teenagers. This imbalance is understandable considering that the aim of this study was to research COVID-19 implications on the education, social life, and mental health of students. However, comparing different variables across multiple age-groups gets quite complicated and can be misleading if not carefully examined.   
 
 
 ```{r}
