@@ -356,8 +356,7 @@ ag5 <- dataset %>%
 ag6 <- dataset %>% 
   drop_na() %>% 
   mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
-  filter(`What respondents miss the most` != "Other")  %>%
-  filter(AgeCat=="46-60") %>%
+  filter(AgeCat=="46-59") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
   mutate(prop=n/4*100) %>% 
@@ -365,7 +364,7 @@ ag6 <- dataset %>%
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
   labs(x = "", 
        y = "", 
-       title = "Ages 46-60") +
+       title = "Ages 46-59") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
