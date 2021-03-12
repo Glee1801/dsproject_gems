@@ -36,6 +36,7 @@ library(ggimage)
 library(ggtext)
 library(patchwork)
 library(gt)            # for creating nice tables
+library(paletteer)
 theme_set(theme_minimal())
 ```
 
@@ -73,7 +74,7 @@ Before exploring the data set, it's important to first acknowledge that there is
 #demographics
 ggplotly(dataset %>% 
   ggplot(aes(x = Age)) +
-  geom_bar(fill = "steelblue1") +
+  geom_bar(fill = "#e7d4e8", color="#9970ab") +
   scale_x_continuous(name = "", breaks = c(5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60)) +
   labs(title = "Number of Survey Respondents by Age", x = "Age", y = "") +
   theme(axis.line = element_blank(), 
@@ -107,7 +108,7 @@ Just as we observed with the previous plot, the number of respondents per region
 #demographics
 ggplotly(dataset %>% 
   ggplot(aes(x = Region)) +
-  geom_bar(fill = "steelblue1") +
+  geom_bar(fill = "#e7d4e8") +
   labs(title = "Number of Survey Respondents by Region", x = "", y = "") +
   theme(panel.grid = element_blank(), 
         plot.title.position= "plot", 
@@ -127,7 +128,7 @@ dataset %>%
   group_by(AgeCat, Connection, Region) %>% 
   ggplot(aes(x = AgeCat,
              y = OnlineClass)) +
-  geom_boxplot(color = "steelblue", fill = "steelblue1", alpha = .5) +
+  geom_boxplot(fill = "#c2a5cf", color = "#762a83", alpha = .5) +
   labs(x = "Age", 
        y = "", 
        title = "Comparing Hours Spent in Class Per Day by Age", col = "grey") +
@@ -153,7 +154,6 @@ In the graph below we seek to examine the relationship with between time spent o
 
 
 ```{r, eval=FALSE}
-
 sleepmedia_anim <- dataset %>% 
   group_by(SocialMedia, avgsleep, AgeCat, Sleep) %>%
   summarise(avgmedia = mean(SocialMedia)) %>%
@@ -170,8 +170,8 @@ sleepmedia_anim <- dataset %>%
   theme(axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot", 
-        legend.position = "none")+
-  scale_color_viridis_d() +
+        legend.position = "none") +
+  scale_color_brewer(palette = "PRGn") +
   exit_fade() +
   enter_recolor(color = "aliceblue") +
   exit_recolor(color = "aliceblue")
@@ -201,6 +201,7 @@ dataset %>%
   ggplot(aes(x = AgeCat, y = avg_time_sm,
              fill = Connection)) +
   geom_col(position = "dodge") +
+  scale_fill_manual(values = c("#9970ab","#5aae61")) +
   #geom_boxplot() +
   labs(title = "Average Hours Spent On Social Media and Connection With Loved Ones Per Age Group",
        x = "",
@@ -208,7 +209,8 @@ dataset %>%
   theme(plot.title = element_text(size = 12),
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot",
+        legend.position = "top")
  
 ```
 
@@ -243,11 +245,12 @@ dataset %>%
   ggplot()+
   geom_bar(position="dodge", aes(x=AgeCat, fill=Region))+
   facet_wrap(vars(`What respondents miss the most`)) +
+  scale_fill_manual(values = c("#9970ab","#5aae61")) +
   labs(
     title = "What Respondents Miss Most by Age Group
-    <span style='color:#F8766D;'>in Dehli</span>
+    <span style='color:#9970ab;'>in Dehli</span>
     <span>and 
-    <span style='color:#00BFC4;'>Outside Dehli</span>",
+    <span style='color:#5aae61;'>Outside Dehli</span>",
     x = "Age Group", y = "") +
   theme_minimal() +
   theme(plot.title = element_markdown(),
@@ -268,7 +271,7 @@ ag1 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/89*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#762a83") +
   labs(x = "", 
        y = "", 
        title = "Ages 7-13") +
@@ -287,7 +290,7 @@ ag2 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/265*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#9970ab") +
   labs(x = "", 
        y = "", 
        title = "Ages 14-18") +
@@ -306,7 +309,7 @@ ag3 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/645*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#c2a5cf") +
   labs(x = "", 
        y = "", 
        title = "Ages 19-23") +
@@ -325,7 +328,7 @@ ag4 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/84*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#a6dba0") +
   labs(x = "", 
        y = "", 
        title = "Ages 24-33") +
@@ -344,7 +347,7 @@ ag5 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/42*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#5aae61") +
   labs(x = "", 
        y = "", 
        title = "Ages 34-45") +
@@ -363,7 +366,7 @@ ag6 <- dataset %>%
   count(sort=TRUE)  %>%
   mutate(prop=n/4*100) %>% 
   ggplot()+
-  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
+  geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="#1b7837") +
   labs(x = "", 
        y = "", 
        title = "Ages 46-59") +
