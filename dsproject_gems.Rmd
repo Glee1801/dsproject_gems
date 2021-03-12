@@ -105,13 +105,13 @@ Just as we observed with the previous plot, the number of respondents per region
 
 ```{r}
 #demographics
-dataset %>% 
+ggplotly(dataset %>% 
   ggplot(aes(x = Region)) +
   geom_bar(fill = "steelblue1") +
   labs(title = "Number of Survey Respondents by Region", x = "", y = "") +
   theme(panel.grid = element_blank(), 
         plot.title.position= "plot", 
-        strip.text.x = element_blank())
+        strip.text.x = element_blank()))
     
 ```
 
@@ -261,6 +261,7 @@ dataset %>%
 ag1 <- dataset %>% 
   drop_na() %>% 
   mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="7-13") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -278,7 +279,8 @@ ag1 <- dataset %>%
 #within AgeCat=14-18, what percentage said what:
 ag2 <- dataset %>% 
   drop_na() %>% 
-  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="14-18") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -296,7 +298,8 @@ ag2 <- dataset %>%
 #within AgeCat=19-23, what percentage said what:
 ag3 <- dataset %>% 
   drop_na() %>% 
-  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="19-23") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -314,7 +317,8 @@ ag3 <- dataset %>%
 #within AgeCat=24-33, what percentage said what:
 ag4 <- dataset %>% 
   drop_na() %>% 
-  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="24-33") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -332,7 +336,8 @@ ag4 <- dataset %>%
 #within AgeCat=34-45, what percentage said what:
 ag5 <- dataset %>% 
   drop_na() %>% 
-  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="34-45") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -350,7 +355,8 @@ ag5 <- dataset %>%
 #within AgeCat=46-60, what percentage said what:
 ag6 <- dataset %>% 
   drop_na() %>% 
-  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
+  mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>%
+  filter(`What respondents miss the most` != "Other")  %>%
   filter(AgeCat=="46-60") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
@@ -367,7 +373,11 @@ ag6 <- dataset %>%
 ```
 
 
-
+```{r, fig.width=13, fig.height=11}
+#pacth together graphs, have the mess around with the size when knitting to make it readable, we can also make it less categories if we want
+(ag1|ag2) / (ag3|ag4) / (ag5 |ag6) +
+  plot_annotation("What Respondents Miss the Most: Proportionally by Age Group")
+```
 
 
 
@@ -391,12 +401,5 @@ dataset %>%
  
 ```
 
-With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's accessible to them). In the graph below, we used the data set to see if there is a strong relationship between the average time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that between the different age groups, the results vary, and the average time spent on social media does not exactly determine whether or not there is a connection with loved ones. This can demonstrate that the connections made with loved ones do not merely come from social media interactions, nor are they a result of having to stay home with loved ones everyday. Indeed, that connection can be a result of anything depending on the individual. 
-
-
-```{r, fig.width=10, fig.height=11}
-#pacth together graphs, have the mess around with the size when knitting to make it readable, we can also make it less categories if we want
-(ag1|ag2) / (ag3|ag4) / (ag5 |ag6) +
-  plot_annotation("What Respondents Miss the Most: Proportionally by Age Group")
-```
+With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's accessible to them). In the graph below, we used the data set to see if there is a strong relationship between the average time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that between the different age groups, the results vary, and the average time spent on social media does not exactly determine whether or not there is a connection with loved ones. This can demonstrate that the connections made with loved ones do not merely come from social media interactions, nor are they a result of having to stay home with loved ones everyday. Indeed, that connection can be a result of anything depending on the individual.
 
