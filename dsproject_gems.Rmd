@@ -427,5 +427,6 @@ ag6 <- dataset %>%
 
 ## **Conclusion**
 
--personal experiences --> Maya wrote some above What you miss the most  
--connect US and India
+In both the United States and India, research data and analysis concludes that the COVID-19 pandemic has indeed impacted students’ mental health and education. Both regions suggest that there are measures we need to begin taking as well as several aspects in our public education that calls for improvisation. It is a global responsibility for authorities, educators, and parents to unleash the potential of our youth by providing them a safe environment and a promising education system.  
+
+There are a few suggestions for educators and institutions that we agreed with and believe should be applied globally once the pandemic ends. First off, educators all over the world should acknowledge the major role that they have within every single students’ mental and physical well-being. Especially at a time like this, there are many steps that teachers can take to help lessen stress and anxiety for their students such as individually checking in with students to chat about aspects of their life outside of academics. Additionally, authorities should start to invest more in online education through further research to improve it for the future. This way, if another global pandemic were to occur in the near future,  we can prevent such issues from reoccurring and thus provide our students with an improved online education system. Teachers will need proper training for skills in remote teaching. Last but definitely not least, the researches suggested that we can better provide mental and emotional support for students by improving healthcare management. 
