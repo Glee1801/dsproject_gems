@@ -127,7 +127,7 @@ dataset %>%
   labs(title = "Age and Sleep")
 ```
 
-This plot compares the median number of hours spent in class by different age groups. For the sole purpose of this study, it is important to draw attention to how many hours students are spending sitting in front of a screen each day. From this plot, we can observe that respondents within the 0-13 and 13-18 age-groups spend the most time in class per day. The researchers emphasized that different variables (time spent on online class, self-study,fitness, sleep, and social media) changes with different age distributions. Average time spent in class and age-group was one of the relationships that were inversely proportional; As age-group value increases, the average number of hours spent online starts to decrease. 
+This plot compares the median number of hours spent in class by different age groups. For the sole purpose of this study, it is important to draw attention to how many hours students are spending sitting in front of a screen each day. From this plot, we can observe that respondents within the 7-13 and 14-18 age-groups spend the most time in class per day. The researchers emphasized that different variables (time spent on online class, self-study,fitness, sleep, and social media) changes with different age distributions. Average time spent in class and age-group was one of the relationships that were inversely proportional; As age-group value increases, the average number of hours spent online starts to decrease. 
 
 
 
@@ -198,7 +198,7 @@ knitr::include_graphics("sleepmedia_anim.gif")
 
 
 
-For most of the age categories there may be a slight negative association between hours of sleep and hours of social media use. It appears that while hours of sleep go up, hours of social media use may slightly go down. For the age category 18 years - 23 years, there appears to be no association at all between amount of sleep and amount of social media use. In addition, the association is not clear for any age group, leading us to believe that the results from the COVID-19 dataset that we are using most likely follow the trnd that the 2018 study by Berryman, Ferguson, and Negy suggested, which is that there is limited proof between social media and mental health effects. It is also worth noting that difference in amount of time sleeping is not the best indicator of mental health outcomes, and another measurement like an increase anxiety or depression symptoms may be a better indicator that was not included in the data set that we used.
+For most of the age categories there may be a slight negative association between hours of sleep and hours of social media use. It appears that while hours of sleep go up, hours of social media use may slightly go down. For the age category 19 years - 23 years, there appears to be no association at all between amount of sleep and amount of social media use. In addition, the association is not clear for any age group, leading us to believe that the results from the COVID-19 dataset that we are using most likely follow the trnd that the 2018 study by Berryman, Ferguson, and Negy suggested, which is that there is limited proof between social media and mental health effects. It is also worth noting that difference in amount of time sleeping is not the best indicator of mental health outcomes, and another measurement like an increase anxiety or depression symptoms may be a better indicator that was not included in the data set that we used.
 
 
 
@@ -257,11 +257,11 @@ dataset %>%
 ```
 
 ```{r}
-#within AgeCat=0-13, what percentage said what:
+#within AgeCat=7-13, what percentage said what:
 ag1 <- dataset %>% 
   drop_na() %>% 
   mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
-  filter(AgeCat=="0-13") %>%
+  filter(AgeCat=="7-13") %>%
   group_by(AgeCat,`What respondents miss the most`) %>% 
   count(sort=TRUE)  %>%
   mutate(prop=n/89*100) %>% 
@@ -269,7 +269,7 @@ ag1 <- dataset %>%
   geom_col(position="dodge", aes(x=`What respondents miss the most`, y=prop), fill="dodgerblue") +
   labs(x = "", 
        y = "", 
-       title = "Ages 0-13") +
+       title = "Ages 7-13") +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
