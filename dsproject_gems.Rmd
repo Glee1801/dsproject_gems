@@ -43,7 +43,7 @@ theme_set(theme_minimal())
 ```{r}
 
 dataset <- read_csv("Data.csv") %>% 
-  mutate(AgeCat = cut(Age, breaks = c(0,13,18,23,33,45,60), labels = c("7-13", "13-18", "18-23", "23-33", "33-45", "45-60"))) %>%
+  mutate(AgeCat = cut(Age, breaks = c(0,13,18,23,33,45,60), labels = c("7-13", "14-18", "19-23", "24-33", "34-45", "46-60"))) %>%
   mutate(avgsleep = mean(Sleep)) %>% 
   mutate(SocialCat = cut_number(SocialMedia, n = 3))
   
