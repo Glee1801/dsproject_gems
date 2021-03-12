@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 and the Impact Mental Health of Students"
+title: "COVID-19 and the Impact on Mental Health of Students"
 author: "Gaocha Lee, Elizabeth Cain, Maya Fernandez, and Stephanie Konadu-Acheampong "
 date: "3/13/2021"
 output: 
