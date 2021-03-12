@@ -42,7 +42,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#dyxcxetoww .gt_table {
+#yftzicooag .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -67,7 +67,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-left-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_heading {
+#yftzicooag .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -79,7 +79,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-right-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_title {
+#yftzicooag .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -89,7 +89,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-bottom-width: 0;
 }
 
-#dyxcxetoww .gt_subtitle {
+#yftzicooag .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -99,13 +99,13 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-top-width: 0;
 }
 
-#dyxcxetoww .gt_bottom_border {
+#yftzicooag .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_col_headings {
+#yftzicooag .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -120,7 +120,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-right-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_col_heading {
+#yftzicooag .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -140,7 +140,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   overflow-x: hidden;
 }
 
-#dyxcxetoww .gt_column_spanner_outer {
+#yftzicooag .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -152,15 +152,15 @@ Before exploring the data set, it's important to first acknowledge that there is
   padding-right: 4px;
 }
 
-#dyxcxetoww .gt_column_spanner_outer:first-child {
+#yftzicooag .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dyxcxetoww .gt_column_spanner_outer:last-child {
+#yftzicooag .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dyxcxetoww .gt_column_spanner {
+#yftzicooag .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -172,7 +172,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   width: 100%;
 }
 
-#dyxcxetoww .gt_group_heading {
+#yftzicooag .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -194,7 +194,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   vertical-align: middle;
 }
 
-#dyxcxetoww .gt_empty_group_heading {
+#yftzicooag .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -209,15 +209,15 @@ Before exploring the data set, it's important to first acknowledge that there is
   vertical-align: middle;
 }
 
-#dyxcxetoww .gt_from_md > :first-child {
+#yftzicooag .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dyxcxetoww .gt_from_md > :last-child {
+#yftzicooag .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dyxcxetoww .gt_row {
+#yftzicooag .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -236,7 +236,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   overflow-x: hidden;
 }
 
-#dyxcxetoww .gt_stub {
+#yftzicooag .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -248,7 +248,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   padding-left: 12px;
 }
 
-#dyxcxetoww .gt_summary_row {
+#yftzicooag .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -258,7 +258,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   padding-right: 5px;
 }
 
-#dyxcxetoww .gt_first_summary_row {
+#yftzicooag .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -268,7 +268,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-top-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_grand_summary_row {
+#yftzicooag .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -278,7 +278,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   padding-right: 5px;
 }
 
-#dyxcxetoww .gt_first_grand_summary_row {
+#yftzicooag .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -288,11 +288,11 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-top-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_striped {
+#yftzicooag .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dyxcxetoww .gt_table_body {
+#yftzicooag .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -301,7 +301,7 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-bottom-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_footnotes {
+#yftzicooag .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -315,13 +315,13 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-right-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_footnote {
+#yftzicooag .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#dyxcxetoww .gt_sourcenotes {
+#yftzicooag .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -335,46 +335,46 @@ Before exploring the data set, it's important to first acknowledge that there is
   border-right-color: #D3D3D3;
 }
 
-#dyxcxetoww .gt_sourcenote {
+#yftzicooag .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#dyxcxetoww .gt_left {
+#yftzicooag .gt_left {
   text-align: left;
 }
 
-#dyxcxetoww .gt_center {
+#yftzicooag .gt_center {
   text-align: center;
 }
 
-#dyxcxetoww .gt_right {
+#yftzicooag .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dyxcxetoww .gt_font_normal {
+#yftzicooag .gt_font_normal {
   font-weight: normal;
 }
 
-#dyxcxetoww .gt_font_bold {
+#yftzicooag .gt_font_bold {
   font-weight: bold;
 }
 
-#dyxcxetoww .gt_font_italic {
+#yftzicooag .gt_font_italic {
   font-style: italic;
 }
 
-#dyxcxetoww .gt_super {
+#yftzicooag .gt_super {
   font-size: 65%;
 }
 
-#dyxcxetoww .gt_footnote_marks {
+#yftzicooag .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="dyxcxetoww" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="yftzicooag" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="3" class="gt_heading gt_title gt_font_normal" style>Respondents by Age Group</th>
@@ -429,8 +429,8 @@ Before exploring the data set, it's important to first acknowledge that there is
   </tbody>
   
   
-</table></div><!--/html_preserve--><!--html_preserve--><div id="htmlwidget-0427cdc31127c2361a66" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0427cdc31127c2361a66">{"x":{"data":[{"orientation":"v","width":[0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.900000000000002,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,42,43,44,45,46,50,52,59],"y":[1,2,2,4,6,29,48,48,37,67,58,66,138,211,188,93,44,23,12,12,6,7,4,8,4,10,5,10,4,5,2,4,1,14,1,2,1,1,1,1,1,1],"text":["count:   1<br />Age:  7","count:   2<br />Age:  8","count:   2<br />Age:  9","count:   4<br />Age: 10","count:   6<br />Age: 11","count:  29<br />Age: 12","count:  48<br />Age: 13","count:  48<br />Age: 14","count:  37<br />Age: 15","count:  67<br />Age: 16","count:  58<br />Age: 17","count:  66<br />Age: 18","count: 138<br />Age: 19","count: 211<br />Age: 20","count: 188<br />Age: 21","count:  93<br />Age: 22","count:  44<br />Age: 23","count:  23<br />Age: 24","count:  12<br />Age: 25","count:  12<br />Age: 26","count:   6<br />Age: 27","count:   7<br />Age: 28","count:   4<br />Age: 29","count:   8<br />Age: 30","count:   4<br />Age: 31","count:  10<br />Age: 32","count:   5<br />Age: 33","count:  10<br />Age: 34","count:   4<br />Age: 35","count:   5<br />Age: 36","count:   2<br />Age: 37","count:   4<br />Age: 38","count:   1<br />Age: 39","count:  14<br />Age: 40","count:   1<br />Age: 42","count:   2<br />Age: 43","count:   1<br />Age: 44","count:   1<br />Age: 45","count:   1<br />Age: 46","count:   1<br />Age: 50","count:   1<br />Age: 52","count:   1<br />Age: 59"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(231,212,232,1)","line":{"width":1.88976377952756,"color":"rgba(153,112,171,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Age","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[3.905,62.095],"tickmode":"array","ticktext":["5","10","15","20","25","30","35","40","45","50","55","60"],"tickvals":[5,10,15,20,25,30,35,40,45,50,55,60],"categoryorder":"array","categoryarray":["5","10","15","20","25","30","35","40","45","50","55","60"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-10.55,221.55],"tickmode":"array","ticktext":["0","50","100","150","200"],"tickvals":[0,50,100,150,200],"categoryorder":"array","categoryarray":["0","50","100","150","200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"90dd7052e9d4":{"x":{},"type":"bar"}},"cur_data":"90dd7052e9d4","visdat":{"90dd7052e9d4":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+</table></div><!--/html_preserve--><!--html_preserve--><div id="htmlwidget-ccbf2e641280c84bba16" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ccbf2e641280c84bba16">{"x":{"data":[{"orientation":"v","width":[0.9,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.899999999999999,0.900000000000002,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006,0.900000000000006],"base":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"x":[7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,42,43,44,45,46,50,52,59],"y":[1,2,2,4,6,29,48,48,37,67,58,66,138,211,188,93,44,23,12,12,6,7,4,8,4,10,5,10,4,5,2,4,1,14,1,2,1,1,1,1,1,1],"text":["count:   1<br />Age:  7","count:   2<br />Age:  8","count:   2<br />Age:  9","count:   4<br />Age: 10","count:   6<br />Age: 11","count:  29<br />Age: 12","count:  48<br />Age: 13","count:  48<br />Age: 14","count:  37<br />Age: 15","count:  67<br />Age: 16","count:  58<br />Age: 17","count:  66<br />Age: 18","count: 138<br />Age: 19","count: 211<br />Age: 20","count: 188<br />Age: 21","count:  93<br />Age: 22","count:  44<br />Age: 23","count:  23<br />Age: 24","count:  12<br />Age: 25","count:  12<br />Age: 26","count:   6<br />Age: 27","count:   7<br />Age: 28","count:   4<br />Age: 29","count:   8<br />Age: 30","count:   4<br />Age: 31","count:  10<br />Age: 32","count:   5<br />Age: 33","count:  10<br />Age: 34","count:   4<br />Age: 35","count:   5<br />Age: 36","count:   2<br />Age: 37","count:   4<br />Age: 38","count:   1<br />Age: 39","count:  14<br />Age: 40","count:   1<br />Age: 42","count:   2<br />Age: 43","count:   1<br />Age: 44","count:   1<br />Age: 45","count:   1<br />Age: 46","count:   1<br />Age: 50","count:   1<br />Age: 52","count:   1<br />Age: 59"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(231,212,232,1)","line":{"width":1.88976377952756,"color":"rgba(153,112,171,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Age","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[3.905,62.095],"tickmode":"array","ticktext":["5","10","15","20","25","30","35","40","45","50","55","60"],"tickvals":[5,10,15,20,25,30,35,40,45,50,55,60],"categoryorder":"array","categoryarray":["5","10","15","20","25","30","35","40","45","50","55","60"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-10.55,221.55],"tickmode":"array","ticktext":["0","50","100","150","200"],"tickvals":[0,50,100,150,200],"categoryorder":"array","categoryarray":["0","50","100","150","200"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"92f65ea0e208":{"x":{},"type":"bar"}},"cur_data":"92f65ea0e208","visdat":{"92f65ea0e208":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 
@@ -441,8 +441,8 @@ Just as we observed with the previous plot, the number of respondents per region
 
 
 
-<!--html_preserve--><div id="htmlwidget-5e12f792d89fd2660731" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5e12f792d89fd2660731">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[721,461],"text":["count: 721<br />Region: Delhi-NCR","count: 461<br />Region: Outside Delhi-NCR"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(231,212,232,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Region","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Delhi-NCR","Outside Delhi-NCR"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Delhi-NCR","Outside Delhi-NCR"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-36.05,757.05],"tickmode":"array","ticktext":["0","200","400","600"],"tickvals":[0,200,400,600],"categoryorder":"array","categoryarray":["0","200","400","600"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"90dd1f755ca6":{"x":{},"type":"bar"}},"cur_data":"90dd1f755ca6","visdat":{"90dd1f755ca6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-bd88a1c0243900ef9ce8" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-bd88a1c0243900ef9ce8">{"x":{"data":[{"orientation":"v","width":[0.9,0.9],"base":[0,0],"x":[1,2],"y":[721,461],"text":["count: 721<br />Region: Delhi-NCR","count: 461<br />Region: Outside Delhi-NCR"],"type":"bar","marker":{"autocolorscale":false,"color":"rgba(231,212,232,1)","line":{"width":1.88976377952756,"color":"transparent"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":25.5707762557078,"l":28.4931506849315},"font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Number of Survey Respondents by Region","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,2.6],"tickmode":"array","ticktext":["Delhi-NCR","Outside Delhi-NCR"],"tickvals":[1,2],"categoryorder":"array","categoryarray":["Delhi-NCR","Outside Delhi-NCR"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-36.05,757.05],"tickmode":"array","ticktext":["0","200","400","600"],"tickvals":[0,200,400,600],"categoryorder":"array","categoryarray":["0","200","400","600"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.65296803652968,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"92f62f13a8fa":{"x":{},"type":"bar"}},"cur_data":"92f62f13a8fa","visdat":{"92f62f13a8fa":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 
@@ -450,9 +450,7 @@ Just as we observed with the previous plot, the number of respondents per region
 This plot compares the median number of hours spent in class by different age groups. For the sole purpose of this study, it is important to draw attention to how many hours students are spending sitting in front of a screen each day. From this plot, we can observe that respondents within the 7-13 and 14-18 age-groups spend the most time in class per day. The researchers emphasized that different variables (time spent on online class, self-study,fitness, sleep, and social media) changes with different age distributions. Average time spent in class and age-group was one of the relationships that were inversely proportional; As age-group value increases, the average number of hours spent online starts to decrease. 
 
 
-
-
-![](dsproject_gems_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](dsproject_gems_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 
@@ -465,8 +463,6 @@ In a recent study examining the relationship between sleep and mental health and
 A correlational study from 2018 examined the association of outcomes of social media use in young adults such as general mental health symptoms, loneliness, suicidal thoughts, and a change in empathy, and found that concerns regarding social media use in young adults may be misplaced. Though organizations such as the Royal Society for public health have reported evidence for links between social media use and poor mental health, this particular study did not find proof of an association. This study pointed out the difference between use of social media on mental health effects. If social media was used for negative social comparison this could lead to depression, but that authentic self-presentation could be associated with positive mental health effects. The 2018 study also stated that time spent with social media or exposure alone is not a good indicator of mental health, but instead that how the time was spent is better for analysis and identifying problems (Berryman, Ferguson, and Negy, 2018). 
 
 In the graph below we seek to examine the relationship with between time spent on social media per week and time spent sleeping per week as indicators for mental health. Due to the fact that sleep disturbance can often be an indicator or association with poor mental health outcomes, we chose to examine how these two variables interacted, and to see if this differed by age.
-
-
 
 
 
@@ -484,7 +480,7 @@ For most of the age categories there may be a slight negative association betwee
 
 
 
-![](dsproject_gems_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](dsproject_gems_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 With the pandemic, students are forced to quarantine at home which results in less face-to-face interactions and more time on social media (if it's accessible to them). In the graph below, we used the data set to see if there is a strong relationship between the average time spent on social media per day and whether or not they feel connected to their loved ones. Interestingly, the plot shows that between the different age groups, the results vary, and the average time spent on social media does not exactly determine whether or not there is a connection with loved ones. This can demonstrate that the connections made with loved ones do not merely come from social media interactions, nor are they a result of having to stay home with loved ones everyday. Indeed, that connection can be a result of anything depending on the individual.
 
@@ -498,7 +494,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#ehndrhcwgs .gt_table {
+#moesailwib .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -523,7 +519,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-left-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_heading {
+#moesailwib .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -535,7 +531,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-right-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_title {
+#moesailwib .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -545,7 +541,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-bottom-width: 0;
 }
 
-#ehndrhcwgs .gt_subtitle {
+#moesailwib .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -555,13 +551,13 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-top-width: 0;
 }
 
-#ehndrhcwgs .gt_bottom_border {
+#moesailwib .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_col_headings {
+#moesailwib .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -576,7 +572,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-right-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_col_heading {
+#moesailwib .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -596,7 +592,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   overflow-x: hidden;
 }
 
-#ehndrhcwgs .gt_column_spanner_outer {
+#moesailwib .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -608,15 +604,15 @@ With the pandemic, students are forced to quarantine at home which results in le
   padding-right: 4px;
 }
 
-#ehndrhcwgs .gt_column_spanner_outer:first-child {
+#moesailwib .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ehndrhcwgs .gt_column_spanner_outer:last-child {
+#moesailwib .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ehndrhcwgs .gt_column_spanner {
+#moesailwib .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -628,7 +624,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   width: 100%;
 }
 
-#ehndrhcwgs .gt_group_heading {
+#moesailwib .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -650,7 +646,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   vertical-align: middle;
 }
 
-#ehndrhcwgs .gt_empty_group_heading {
+#moesailwib .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -665,15 +661,15 @@ With the pandemic, students are forced to quarantine at home which results in le
   vertical-align: middle;
 }
 
-#ehndrhcwgs .gt_from_md > :first-child {
+#moesailwib .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ehndrhcwgs .gt_from_md > :last-child {
+#moesailwib .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ehndrhcwgs .gt_row {
+#moesailwib .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -692,7 +688,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   overflow-x: hidden;
 }
 
-#ehndrhcwgs .gt_stub {
+#moesailwib .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -704,7 +700,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   padding-left: 12px;
 }
 
-#ehndrhcwgs .gt_summary_row {
+#moesailwib .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -714,7 +710,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   padding-right: 5px;
 }
 
-#ehndrhcwgs .gt_first_summary_row {
+#moesailwib .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -724,7 +720,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-top-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_grand_summary_row {
+#moesailwib .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -734,7 +730,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   padding-right: 5px;
 }
 
-#ehndrhcwgs .gt_first_grand_summary_row {
+#moesailwib .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -744,11 +740,11 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-top-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_striped {
+#moesailwib .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ehndrhcwgs .gt_table_body {
+#moesailwib .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -757,7 +753,7 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-bottom-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_footnotes {
+#moesailwib .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -771,13 +767,13 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-right-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_footnote {
+#moesailwib .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#ehndrhcwgs .gt_sourcenotes {
+#moesailwib .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -791,46 +787,46 @@ With the pandemic, students are forced to quarantine at home which results in le
   border-right-color: #D3D3D3;
 }
 
-#ehndrhcwgs .gt_sourcenote {
+#moesailwib .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#ehndrhcwgs .gt_left {
+#moesailwib .gt_left {
   text-align: left;
 }
 
-#ehndrhcwgs .gt_center {
+#moesailwib .gt_center {
   text-align: center;
 }
 
-#ehndrhcwgs .gt_right {
+#moesailwib .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ehndrhcwgs .gt_font_normal {
+#moesailwib .gt_font_normal {
   font-weight: normal;
 }
 
-#ehndrhcwgs .gt_font_bold {
+#moesailwib .gt_font_bold {
   font-weight: bold;
 }
 
-#ehndrhcwgs .gt_font_italic {
+#moesailwib .gt_font_italic {
   font-style: italic;
 }
 
-#ehndrhcwgs .gt_super {
+#moesailwib .gt_super {
   font-size: 65%;
 }
 
-#ehndrhcwgs .gt_footnote_marks {
+#moesailwib .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="ehndrhcwgs" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="moesailwib" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   <thead class="gt_header">
     <tr>
       <th colspan="2" class="gt_heading gt_title gt_font_normal" style>What Respondents Miss Most</th>
@@ -883,7 +879,7 @@ We were interested to examine what the survey respondents missed the most during
 
 
 
-![](dsproject_gems_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](dsproject_gems_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
 
@@ -891,7 +887,7 @@ We were interested to examine what the survey respondents missed the most during
 
 
 
-![](dsproject_gems_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+![](dsproject_gems_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 
 

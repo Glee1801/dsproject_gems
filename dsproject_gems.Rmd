@@ -127,10 +127,6 @@ ggplotly(dataset %>%
 
 This plot compares the median number of hours spent in class by different age groups. For the sole purpose of this study, it is important to draw attention to how many hours students are spending sitting in front of a screen each day. From this plot, we can observe that respondents within the 7-13 and 14-18 age-groups spend the most time in class per day. The researchers emphasized that different variables (time spent on online class, self-study,fitness, sleep, and social media) changes with different age distributions. Average time spent in class and age-group was one of the relationships that were inversely proportional; As age-group value increases, the average number of hours spent online starts to decrease. 
 
-```{r}
-
-```
-
 
 ```{r}
 dataset %>%
@@ -170,7 +166,7 @@ sleepmedia_anim <- dataset %>%
              color = AgeCat, 
              group = AgeCat)) +
   geom_jitter() +
-  labs(y = "Hours of Social Media Use", 
+  labs(y = "", 
        x = "Hours of Sleep", 
        title = "Amount of Sleep and Corresponding Social Media Use in Hours by Age Category", 
        subtitle = "Ages: {closest_state}") +
@@ -178,7 +174,10 @@ sleepmedia_anim <- dataset %>%
   theme(axis.line = element_blank(), 
         panel.grid = element_blank(), 
         plot.title.position= "plot", 
-        legend.position = "none") +
+        legend.position = "none",
+        plot.title = element_text(size = 16),
+        axis.title.x = element_text(size=12),
+        axis.title.y = element_text(size=12))+
   scale_color_brewer(palette = "PRGn") +
   exit_fade() +
   enter_recolor(color = "aliceblue") +
@@ -187,10 +186,6 @@ sleepmedia_anim <- dataset %>%
 animate(sleepmedia_anim, duration = 20)
 
 anim_save("sleepmedia_anim.gif")
-```
-
-```{r}
-
 ```
 
 ```{r}
@@ -297,6 +292,10 @@ dataset %>%
 
 ```{r}
 #within AgeCat=7-13, what percentage said what:
+
+listlabels <- c("Eating Outside", "Friends/Relatives", "Roaming Freely", "School/College", "Travelling")
+listlastlabels <- c("School/College", "Travelling")
+
 ag1 <- dataset %>% 
   drop_na() %>% 
   mutate(`What respondents miss the most` = fct_lump_n(`What you miss the most`, 5)) %>% 
@@ -310,6 +309,7 @@ ag1 <- dataset %>%
   labs(x = "", 
        y = "", 
        title = "Ages 7-13") +
+  scale_x_discrete(labels= listlabels) +
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
@@ -332,7 +332,8 @@ ag2 <- dataset %>%
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot") +
+  scale_x_discrete(labels= listlabels)
 
 #within AgeCat=19-23, what percentage said what:
 ag3 <- dataset %>% 
@@ -351,7 +352,8 @@ ag3 <- dataset %>%
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot") +
+  scale_x_discrete(labels= listlabels)
 
 #within AgeCat=24-33, what percentage said what:
 ag4 <- dataset %>% 
@@ -370,7 +372,8 @@ ag4 <- dataset %>%
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot") +
+  scale_x_discrete(labels= listlabels)
 
 #within AgeCat=34-45, what percentage said what:
 ag5 <- dataset %>% 
@@ -389,7 +392,8 @@ ag5 <- dataset %>%
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot") +
+  scale_x_discrete(labels= listlabels)
 
 #within AgeCat=46-60, what percentage said what:
 ag6 <- dataset %>% 
@@ -408,7 +412,8 @@ ag6 <- dataset %>%
   theme(legend.position = "none",
         axis.line = element_blank(), 
         panel.grid = element_blank(), 
-        plot.title.position= "plot")
+        plot.title.position= "plot") +
+  scale_x_discrete(labels= listlastlabels)
 ```
 
 
